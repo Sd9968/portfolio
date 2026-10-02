@@ -1,6 +1,10 @@
 export type Locale = "en" | "fr" | "ar";
 
 export type WorkItem = {
+  caseStudy: {
+    sections: Array<{ title: string; body: string }>;
+    metrics: Array<{ name: string; definition: string }>;
+  };
   name: string;
   tag: string;
   summary: string;
@@ -13,6 +17,7 @@ export type WorkItem = {
 };
 
 export type Dictionary = {
+  caseStudy: { metricsLabel: string; metricsNote: string };
   meta: {
     title: string;
     description: string;

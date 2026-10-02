@@ -3,8 +3,8 @@ import type { Dictionary, Locale } from "./types";
 export const dictionaries: Record<Locale, Dictionary> = {
   "en": {
     "meta": {
-      "title": "Atheeq Syed — Applied AI & Product Engineering",
-      "description": "From user discovery to deployed AI products. Explore Atheeq Syed’s work at Sanofi, NidahAI voice agents, and automation built with APIs, Snowflake and n8n. Paris, France."
+      "title": "Atheeq Syed — Product & AI Deployment Strategy",
+      "description": "I understand user workflows, shape product priorities, and coordinate with engineering teams to deploy useful solutions. When it helps move an idea forward, I prototype and code with tools like Cursor."
     },
     "nav": {
       "work": "Work",
@@ -15,9 +15,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "language": "Language"
     },
     "hero": {
-      "role": "Applied AI · Product Engineering · User Discovery",
-      "headline": "I turn real workflow problems into working AI products.",
-      "sub": "Computer science meets product thinking. I work with users to understand the problem, build the integrations, and carry the solution through deployment and adoption.",
+      "role": "Product · AI Deployment Strategy · Enterprise Workflows",
+      "headline": "I help teams turn user needs into solutions that fit their workflows.",
+      "sub": "I understand user workflows, shape product priorities, and coordinate with engineering teams to deploy useful solutions. When it helps move an idea forward, I prototype and code with tools like Cursor.",
       "email": "Let’s talk",
       "resume": "Download resume",
       "basedIn": "Paris, France",
@@ -25,51 +25,84 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     "about": {
       "label": "About",
-      "title": "Close to the user. Hands on with the build.",
+      "title": "Understanding the workflow is where the product starts.",
       "p1": "My path connects computer science at SRM University AP, payments technology at Fiserv, and a Master in Management at ESSEC across Singapore and Paris. I enjoy the point where a business problem becomes something concrete enough to build.",
       "p2": "At Sanofi, I worked with product, engineering, and business teams to turn recurring development bottlenecks into an internal AI product. At KidSpass.Asia, conversations with partners and customers helped reshape onboarding with the founding team.",
-      "p3": "The projects I choose reflect what interests me: voice interfaces, useful AI agents, and automation that can act through real systems. I’m drawn to work that combines customer discovery, technical implementation, and iteration after launch."
+      "p3": "I’m interested in product and deployment strategy: understanding how people work, deciding what a solution needs to do, and helping teams adopt it. I can prototype and code using Cursor, alongside coordinating with engineering teams. My projects let me explore voice-based service access, content operations, and visual decision support."
     },
     "work": {
       "label": "Selected work",
-      "title": "Understand the workflow. Build the solution.",
+      "title": "Understanding the workflow is where the product starts.",
       "items": [
         {
           "name": "Sanofi — internal AI product",
           "tag": "Discovery → Integration → Deployment",
           "summary": "Teams were rebuilding components that already existed. I led an internal AI product from discovery through deployment to help teams find and reuse existing work.",
-          "points": [
-            "Discovery: sessions across 20+ teams to understand workflows, bottlenecks, and reuse opportunities.",
-            "Build: connected GitHub APIs, internal commercial datasets, and Snowflake Cortex into the solution.",
-            "Delivery: validated outputs with product, engineering, and business stakeholders, iterated on gaps, and supported adoption.",
-            "Outcome: enabled component reuse to reduce repeat development and investment effort."
-          ],
+          "points": [],
           "status": "Deployed internally",
           "stack": [
             "GitHub APIs",
             "Snowflake Cortex",
             "Internal datasets"
           ],
-          "detailLabel": "Inside the work"
+          "detailLabel": "Read the product case study",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Product rationale",
+                "body": "Repeated development was a workflow problem: teams needed to discover reusable work before committing time and budget to rebuilding. Discovery across 20+ teams informed the internal product."
+              },
+              {
+                "title": "Users & jobs to be done",
+                "body": "Internal product, engineering, and business teams evaluating AI initiatives. Their job: find relevant components, assess reuse, and move from an idea to a scoped solution."
+              },
+              {
+                "title": "Product & deployment decisions",
+                "body": "Brought GitHub APIs, internal commercial datasets, and Snowflake Cortex into the workflow. Worked with stakeholders to translate needs into capabilities, validate outputs, iterate on gaps, and support adoption."
+              },
+              {
+                "title": "Workflow",
+                "body": "New initiative → find existing components → assess fit with stakeholders → reuse where appropriate → validate and adopt."
+              },
+              {
+                "title": "My contribution",
+                "body": "Led discovery and end-to-end deployment, coordinated with product, engineering, and business stakeholders, and built the solution."
+              },
+              {
+                "title": "Evidence & next measurement",
+                "body": "Deployed internally; discovery covered 20+ teams. Component reuse is supported by the resume; no quantified time or investment savings are claimed."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Successful reuse rate",
+                "definition": "Initiatives that reuse a suitable existing component ÷ initiatives assessed."
+              },
+              {
+                "name": "Time to identify a usable component",
+                "definition": "Median time from a reuse request to a stakeholder-validated match."
+              },
+              {
+                "name": "Adoption & relevance",
+                "definition": "Repeat use by target teams; proportion of suggested components judged relevant."
+              }
+            ]
+          }
         }
       ]
     },
     "projects": {
-      "label": "Personal projects",
-      "title": "Systems I build beyond the day job.",
-      "intro": "Independent projects in voice AI and automation. Each starts with a workflow and connects the AI to actions, integrations, and human decisions.",
+      "label": "Product case studies",
+      "title": "The user, the problem, and the product decisions.",
+      "intro": "A closer look at who each product serves, the workflow it changes, my contribution, and how I would evaluate success.",
       "visit": "Visit site",
       "items": [
         {
           "name": "NidahAI",
-          "tag": "Voice AI · Independent build",
+          "tag": "Service access · Voice AI",
           "status": "Production voice agent",
           "summary": "An inbound voice AI agent that identifies intent, handles multi-step conversations, and triggers actions through APIs and webhooks.",
-          "points": [
-            "Problem: turn an inbound conversation into a completed task, rather than just a generated answer.",
-            "My build: conversation logic, prompting, telephony integrations, scheduling workflows, and human handoff.",
-            "How it works: inbound call → intent → workflow → API action or human handoff."
-          ],
+          "points": [],
           "href": "https://nidahai.com/",
           "linkLabel": "Explore NidahAI",
           "stack": [
@@ -78,19 +111,56 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "APIs",
             "Webhooks"
           ],
-          "detailLabel": "Explore the build"
+          "detailLabel": "Read the product case study",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Product rationale",
+                "body": "A voice conversation should help someone reach a service and complete a task. NidahAI explores how to turn that interaction into an operational workflow with a route to human help."
+              },
+              {
+                "title": "Users & jobs to be done",
+                "body": "Designed for callers seeking clinic information or appointment support, and operations teams handling those requests. The caller’s job: reach the right service and resolve the request without repeated explanations."
+              },
+              {
+                "title": "Product & deployment decisions",
+                "body": "Connected conversation logic to telephony, scheduling, APIs, and webhooks. Included human handoff for requests requiring staff involvement. The product should be assessed on task accuracy and service access."
+              },
+              {
+                "title": "Workflow",
+                "body": "Inbound call → identify intent → answer or manage appointment → confirm the action → hand off when needed."
+              },
+              {
+                "title": "My contribution",
+                "body": "Independently designed, built, and launched the voice agent, including prompting, conversation logic, integrations, scheduling workflows, and human handoff."
+              },
+              {
+                "title": "Evidence & next measurement",
+                "body": "Production voice agent according to the resume. The KPIs below are proposed measures; no call volumes, accuracy rates, or time savings are reported."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Request error rate",
+                "definition": "Incorrect or incomplete appointment/service actions ÷ attempted actions; separate intent errors from action errors."
+              },
+              {
+                "name": "Time to reach the service",
+                "definition": "Median and 90th-percentile time from call start to a useful response or connection to the appropriate human."
+              },
+              {
+                "name": "Resolution & handoff quality",
+                "definition": "Requests completed correctly without repeat contact; successful human connections ÷ handoff attempts."
+              }
+            ]
+          }
         },
         {
           "name": "Business Explainer",
-          "tag": "AI automation · Independent build",
+          "tag": "Content operations · Human approval",
           "status": "In development",
           "summary": "An AI content workflow that selects educational business topics, generates Instagram content and assets, and sends previews to WhatsApp for human approval.",
-          "points": [
-            "Problem: connect content generation, review, and publishing in one controlled workflow.",
-            "My build: approval, rejection, regeneration, expiry, and publishing paths using n8n, AWS AI services, and Meta integrations.",
-            "How it works: topic → content + assets → WhatsApp preview → approval → publishing.",
-            "Design choice: a human approval gate before publishing."
-          ],
+          "points": [],
           "stack": [
             "n8n",
             "AWS AI",
@@ -98,30 +168,110 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "WhatsApp",
             "Webhooks"
           ],
-          "detailLabel": "Explore the build"
+          "detailLabel": "Read the product case study",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Product rationale",
+                "body": "Content production involves several decisions beyond generating text: choosing a topic, checking quality, reviewing assets, and approving publication. The product connects these steps while retaining human editorial control."
+              },
+              {
+                "title": "Users & jobs to be done",
+                "body": "Designed for the creator or operator managing business education content, with learners as the intended audience. The operator’s job: review and publish useful content without moving manually between disconnected tools."
+              },
+              {
+                "title": "Product & deployment decisions",
+                "body": "Used WhatsApp as the review surface and a human approval gate before publishing. Designed explicit approval, rejection, regeneration, and expiry paths so review decisions can drive the next workflow step."
+              },
+              {
+                "title": "Workflow",
+                "body": "Select topic → generate content and assets → send WhatsApp preview → approve, reject, or regenerate → publish approved content; expire stale requests."
+              },
+              {
+                "title": "My contribution",
+                "body": "Designed and am building the end-to-end workflow using n8n, AWS AI services, APIs, webhooks, and Meta WhatsApp/Instagram integrations."
+              },
+              {
+                "title": "Evidence & next measurement",
+                "body": "In development. These are proposed evaluation metrics, not achieved results or claims about an existing audience."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Approval-to-publication time",
+                "definition": "Median elapsed time between human approval and successful publication; track generation-to-review separately."
+              },
+              {
+                "name": "Publishing reliability",
+                "definition": "Approved posts published correctly ÷ approved posts; count duplicates and failed publishes separately."
+              },
+              {
+                "name": "Review effort & content quality",
+                "definition": "Manual minutes per approved post, first-pass approval rate, and corrections needed for factual errors."
+              }
+            ]
+          }
         },
         {
           "name": "Meet Your Plate",
-          "tag": "Product · AR Experience",
+          "tag": "Dining decisions · AR menus",
           "href": "https://www.meetyourplate.com/",
           "summary": "A platform where restaurant owners build their menus and host AR models — giving diners a richer, more immersive way to experience dishes before they order.",
-          "points": [
-            "Menu builder for restaurant owners",
-            "AR model hosting for dish previews",
-            "Enriched dining discovery experience"
-          ],
+          "points": [],
           "status": "Additional product exploration",
-          "detailLabel": "Explore the build",
+          "detailLabel": "Read the product case study",
           "stack": [
             "AR",
             "Menu experience"
-          ]
+          ],
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Product rationale",
+                "body": "Menu descriptions can leave diners uncertain about what a dish will look like. Meet Your Plate explores whether a visual preview can support a more confident choice before ordering."
+              },
+              {
+                "title": "Users & jobs to be done",
+                "body": "Designed for diners comparing dishes and restaurant owners maintaining their menus. Diners want to understand a dish; owners need to present and update menu information."
+              },
+              {
+                "title": "Product & deployment decisions",
+                "body": "Combined a restaurant menu builder with hosted AR dish models. The product question: does the preview reduce uncertainty enough to justify the extra step for diners and content upkeep for owners?"
+              },
+              {
+                "title": "Workflow",
+                "body": "Owner builds a menu and adds models → diner browses dishes → opens an AR preview → decides what to order."
+              },
+              {
+                "title": "My contribution",
+                "body": "Created the menu and AR product presented in the existing portfolio. Customer interviews, restaurant adoption, and commercial impact are not documented here."
+              },
+              {
+                "title": "Evidence & next measurement",
+                "body": "Product exploration. The metrics below require restaurant pilots and instrumentation; this portfolio does not claim reduced order errors."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Order misunderstanding rate",
+                "definition": "Orders corrected because the expected dish differed from the selected dish ÷ orders in a pilot; compare with a baseline."
+              },
+              {
+                "name": "Time to choose a dish",
+                "definition": "Median time from menu open to dish selection, measured alongside satisfaction so faster selection is not assumed to be better."
+              },
+              {
+                "name": "Preview usefulness & owner effort",
+                "definition": "Preview completion rate, diner confidence feedback, and time for owners to create or update a menu item."
+              }
+            ]
+          }
         }
       ]
     },
     "experience": {
       "label": "Experience",
-      "title": "Engineering grounding. Product perspective.",
+      "title": "Product thinking. Technical fluency.",
       "roles": [
         {
           "company": "Sanofi",
@@ -185,7 +335,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     "contact": {
       "label": "Contact",
       "title": "Let’s build something useful.",
-      "sub": "Interested in applied AI, forward-deployed engineering, and product roles where I can work with users and own the implementation.",
+      "sub": "Open to product, AI deployment strategy, and enterprise solution roles focused on user workflows, engineering collaboration, and adoption.",
       "email": "Email",
       "linkedin": "LinkedIn",
       "resume": "Resume"
@@ -195,26 +345,26 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     "capabilities": {
       "label": "How I work",
-      "title": "From a conversation to a deployed workflow.",
+      "title": "From user needs to everyday adoption.",
       "steps": [
         {
-          "title": "01 / Discover",
-          "body": "Talk to users, map the workflow, and identify the bottleneck worth solving."
+          "title": "01 / Understand",
+          "body": "Talk to users and map the task, friction, and constraints before choosing a solution."
         },
         {
-          "title": "02 / Build",
-          "body": "Connect data, models, APIs, and business logic into a working product."
+          "title": "02 / Prioritize",
+          "body": "Define the problem, scope the product, and agree on success measures."
         },
         {
-          "title": "03 / Validate",
-          "body": "Test outputs with stakeholders, handle handoffs, and iterate on gaps."
+          "title": "03 / Coordinate",
+          "body": "Work with engineering on requirements and integrations; prototype with Cursor when useful."
         },
         {
-          "title": "04 / Deliver",
-          "body": "Deploy the solution and support the people who will use it."
+          "title": "04 / Embed",
+          "body": "Validate with users, deploy into the workflow, and evaluate adoption and outcomes."
         }
       ],
-      "skillsLabel": "Tools I work with",
+      "skillsLabel": "Tools for analysis, prototyping & deployment",
       "skills": [
         "Python",
         "SQL",
@@ -228,12 +378,16 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Google Analytics",
         "Jira"
       ]
+    },
+    "caseStudy": {
+      "metricsLabel": "Proposed success metrics",
+      "metricsNote": "Evaluation framework; these metrics are not reported results."
     }
   },
   "fr": {
     "meta": {
-      "title": "Atheeq Syed — IA appliquée & ingénierie produit",
-      "description": "De la découverte utilisateur aux produits IA déployés : Sanofi, agents vocaux NidahAI et automatisation avec APIs, Snowflake et n8n. Paris."
+      "title": "Atheeq Syed — Produit & stratégie de déploiement IA",
+      "description": "Je comprends les processus utilisateurs, définis les priorités produit et coordonne le déploiement avec les équipes d’ingénierie. Je prototype et code avec des outils comme Cursor lorsque cela fait avancer une idée."
     },
     "nav": {
       "work": "Travail",
@@ -244,9 +398,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "language": "Langue"
     },
     "hero": {
-      "role": "IA appliquée · Ingénierie produit · Découverte utilisateur",
-      "headline": "Je transforme les problèmes métier en produits IA opérationnels.",
-      "sub": "Un socle informatique et une approche produit. Je travaille avec les utilisateurs pour comprendre le problème, construire les intégrations et accompagner le déploiement et l’adoption.",
+      "role": "Produit · Déploiement IA · Processus en entreprise",
+      "headline": "J’aide les équipes à transformer les besoins utilisateurs en solutions adaptées à leurs processus.",
+      "sub": "Je comprends les processus utilisateurs, définis les priorités produit et coordonne le déploiement avec les équipes d’ingénierie. Je prototype et code avec des outils comme Cursor lorsque cela fait avancer une idée.",
       "email": "Échangeons",
       "resume": "Télécharger le CV",
       "basedIn": "Paris, France",
@@ -254,51 +408,84 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     "about": {
       "label": "À propos",
-      "title": "Au contact des utilisateurs. Impliqué dans la réalisation.",
+      "title": "Comprendre le processus est le point de départ du produit.",
       "p1": "Mon parcours relie l’informatique à SRM University AP, les paiements chez Fiserv et un Master in Management à l’ESSEC, entre Singapour et Paris. J’aime transformer un problème métier en solution concrète.",
       "p2": "Chez Sanofi, j’ai travaillé avec les équipes produit, ingénierie et métier pour transformer des difficultés récurrentes de développement en produit IA interne. Chez KidSpass.Asia, les échanges avec les partenaires et clients ont guidé la refonte de l’onboarding avec les fondateurs.",
-      "p3": "Mes projets reflètent mes centres d’intérêt : interfaces vocales, agents IA utiles et automatisations connectées à des systèmes réels. Je recherche un travail qui combine découverte client, réalisation technique et amélioration après le lancement."
+      "p3": "Je m’intéresse au produit et à la stratégie de déploiement : comprendre le travail des utilisateurs, définir la solution et accompagner son adoption. Je peux prototyper et coder avec Cursor, tout en coordonnant avec l’ingénierie. Mes projets explorent l’accès vocal aux services, les opérations de contenu et l’aide visuelle à la décision."
     },
     "work": {
       "label": "Travail sélectionné",
-      "title": "Comprendre le processus. Construire la solution.",
+      "title": "Comprendre le processus est le point de départ du produit.",
       "items": [
         {
           "name": "Sanofi — produit IA interne",
           "tag": "Découverte → Intégration → Déploiement",
           "status": "Déployé en interne",
           "summary": "Les équipes reconstruisaient des composants déjà existants. J’ai mené un produit IA interne de la découverte au déploiement pour faciliter la recherche et la réutilisation du travail existant.",
-          "points": [
-            "Découverte : échanges avec plus de 20 équipes sur leurs processus, difficultés et possibilités de réutilisation.",
-            "Réalisation : intégration des APIs GitHub, de données commerciales internes et de Snowflake Cortex.",
-            "Livraison : validation des résultats avec les équipes produit, ingénierie et métier, itérations et accompagnement de l’adoption.",
-            "Résultat : réutilisation de composants pour réduire les développements répétitifs et les efforts d’investissement."
-          ],
+          "points": [],
           "stack": [
             "GitHub APIs",
             "Snowflake Cortex",
             "Internal datasets"
           ],
-          "detailLabel": "Dans les coulisses"
+          "detailLabel": "Lire l’étude de cas produit",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Logique produit",
+                "body": "Les développements répétés révélaient un problème de processus : découvrir les composants réutilisables avant de mobiliser du temps et du budget. Les échanges avec plus de 20 équipes ont guidé le produit interne."
+              },
+              {
+                "title": "Utilisateurs & besoins",
+                "body": "Équipes internes produit, ingénierie et métier évaluant des initiatives IA : trouver des composants pertinents, évaluer leur réutilisation et cadrer une solution."
+              },
+              {
+                "title": "Décisions produit & déploiement",
+                "body": "Intégration des APIs GitHub, de données commerciales internes et de Snowflake Cortex. Traduction des besoins en fonctionnalités, validation avec les équipes, itérations et accompagnement de l’adoption."
+              },
+              {
+                "title": "Parcours",
+                "body": "Initiative → recherche de composants → évaluation avec les équipes → réutilisation → validation et adoption."
+              },
+              {
+                "title": "Ma contribution",
+                "body": "Pilotage de la découverte et du déploiement complet, coordination des équipes produit, ingénierie et métier, et construction de la solution."
+              },
+              {
+                "title": "Éléments établis & mesure à venir",
+                "body": "Déployé en interne ; découverte auprès de plus de 20 équipes. Aucun gain chiffré en temps ou en investissement n’est revendiqué."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Taux de réutilisation réussie",
+                "definition": "Initiatives réutilisant un composant adapté ÷ initiatives évaluées."
+              },
+              {
+                "name": "Temps pour trouver un composant utile",
+                "definition": "Temps médian entre une demande et une correspondance validée par les équipes."
+              },
+              {
+                "name": "Adoption & pertinence",
+                "definition": "Usage répété par les équipes cibles et proportion de recommandations jugées pertinentes."
+              }
+            ]
+          }
         }
       ]
     },
     "projects": {
-      "label": "Projets personnels",
-      "title": "Les systèmes que je construis en parallèle.",
-      "intro": "Des projets indépendants en IA vocale et automatisation, reliant chaque processus aux actions, intégrations et décisions humaines.",
+      "label": "Études de cas produit",
+      "title": "Les utilisateurs, le problème et les décisions produit.",
+      "intro": "À qui s’adresse chaque produit, quel processus change, ma contribution et comment évaluer son succès.",
       "visit": "Voir le site",
       "items": [
         {
           "name": "NidahAI",
-          "tag": "IA vocale · Projet indépendant",
+          "tag": "Accès au service · IA vocale",
           "status": "Agent vocal en production",
           "summary": "Un agent vocal IA pour les appels entrants, capable de comprendre l’intention, gérer des conversations en plusieurs étapes et déclencher des actions via APIs et webhooks.",
-          "points": [
-            "Problème : transformer une conversation entrante en tâche accomplie.",
-            "Ma contribution : logique conversationnelle, prompting, téléphonie, planification et transfert à un humain.",
-            "Parcours : appel → intention → processus → action API ou transfert humain."
-          ],
+          "points": [],
           "href": "https://nidahai.com/",
           "linkLabel": "Découvrir NidahAI",
           "stack": [
@@ -307,19 +494,56 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "APIs",
             "Webhooks"
           ],
-          "detailLabel": "Découvrir la réalisation"
+          "detailLabel": "Lire l’étude de cas produit",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Logique produit",
+                "body": "Une conversation vocale doit permettre d’accéder à un service et d’accomplir une tâche. NidahAI relie l’échange à un processus opérationnel avec un accès à une aide humaine."
+              },
+              {
+                "title": "Utilisateurs & besoins",
+                "body": "Conçu pour les appelants recherchant des informations ou une aide pour leurs rendez-vous, et les équipes opérationnelles des cliniques. Résoudre la demande sans répéter les informations."
+              },
+              {
+                "title": "Décisions produit & déploiement",
+                "body": "Logique conversationnelle reliée à la téléphonie, à la planification, aux APIs et aux webhooks, avec transfert humain. Évaluer la précision des actions et l’accès au service."
+              },
+              {
+                "title": "Parcours",
+                "body": "Appel → intention → information ou rendez-vous → confirmation → transfert humain si nécessaire."
+              },
+              {
+                "title": "Ma contribution",
+                "body": "Conception, construction et lancement indépendants : prompting, logique conversationnelle, intégrations, planification et transfert humain."
+              },
+              {
+                "title": "Éléments établis & mesure à venir",
+                "body": "Agent vocal en production selon le CV. Les KPIs sont proposés ; aucun volume, taux de précision ou gain de temps n’est annoncé."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Taux d’erreur des demandes",
+                "definition": "Actions incorrectes ou incomplètes ÷ actions tentées ; distinguer les erreurs d’intention et d’exécution."
+              },
+              {
+                "name": "Temps d’accès au service",
+                "definition": "Médiane et 90e percentile du temps entre le début de l’appel et une réponse utile ou le contact avec la bonne personne."
+              },
+              {
+                "name": "Résolution & qualité du transfert",
+                "definition": "Demandes correctement résolues sans nouveau contact ; connexions humaines réussies ÷ transferts tentés."
+              }
+            ]
+          }
         },
         {
           "name": "Business Explainer",
-          "tag": "Automatisation IA · Projet indépendant",
+          "tag": "Opérations de contenu · Validation humaine",
           "status": "En développement",
           "summary": "Un processus IA qui sélectionne des sujets pédagogiques sur le business, génère du contenu Instagram et ses visuels, puis envoie un aperçu sur WhatsApp pour validation humaine.",
-          "points": [
-            "Problème : relier génération, validation et publication dans un processus contrôlé.",
-            "Ma contribution : approbation, rejet, régénération, expiration et publication avec n8n, AWS et les intégrations Meta.",
-            "Parcours : sujet → contenu et visuels → aperçu WhatsApp → approbation → publication.",
-            "Choix de conception : une validation humaine avant publication."
-          ],
+          "points": [],
           "stack": [
             "n8n",
             "AWS AI",
@@ -327,30 +551,110 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "WhatsApp",
             "Webhooks"
           ],
-          "detailLabel": "Découvrir la réalisation"
+          "detailLabel": "Lire l’étude de cas produit",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Logique produit",
+                "body": "La production de contenu inclut le choix du sujet, la vérification, les visuels et l’approbation. Le produit relie ces étapes en conservant un contrôle éditorial humain."
+              },
+              {
+                "title": "Utilisateurs & besoins",
+                "body": "Conçu pour le créateur ou opérateur de contenus pédagogiques business, destinés aux apprenants. Réviser et publier sans déplacer manuellement les éléments entre outils."
+              },
+              {
+                "title": "Décisions produit & déploiement",
+                "body": "WhatsApp comme interface de revue et approbation humaine avant publication. Parcours explicites pour approbation, rejet, régénération et expiration."
+              },
+              {
+                "title": "Parcours",
+                "body": "Sujet → contenu et visuels → aperçu WhatsApp → approbation, rejet ou régénération → publication ; expiration des demandes anciennes."
+              },
+              {
+                "title": "Ma contribution",
+                "body": "Conception et construction en cours avec n8n, AWS AI, APIs, webhooks et intégrations Meta WhatsApp/Instagram."
+              },
+              {
+                "title": "Éléments établis & mesure à venir",
+                "body": "En développement. Mesures proposées, sans résultat atteint ni audience revendiquée."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Délai approbation-publication",
+                "definition": "Temps médian entre l’approbation humaine et la publication réussie ; mesurer séparément la préparation de l’aperçu."
+              },
+              {
+                "name": "Fiabilité de publication",
+                "definition": "Publications approuvées et correctement publiées ÷ publications approuvées ; suivre les doublons et les échecs."
+              },
+              {
+                "name": "Effort de revue & qualité",
+                "definition": "Minutes manuelles par publication approuvée, taux d’approbation initiale et corrections factuelles nécessaires."
+              }
+            ]
+          }
         },
         {
           "name": "Meet Your Plate",
-          "tag": "Produit · Expérience AR",
+          "tag": "Choix des plats · Menus AR",
           "href": "https://www.meetyourplate.com/",
           "summary": "Une plateforme où les restaurateurs construisent leur menu et hébergent des modèles AR — pour une découverte des plats plus riche avant la commande.",
-          "points": [
-            "Éditeur de menu pour restaurateurs",
-            "Hébergement de modèles AR pour les plats",
-            "Expérience de découverte enrichie"
-          ],
+          "points": [],
           "status": "Exploration produit complémentaire",
           "stack": [
             "AR",
             "Menus"
           ],
-          "detailLabel": "Découvrir la réalisation"
+          "detailLabel": "Lire l’étude de cas produit",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Logique produit",
+                "body": "Une description de menu peut laisser planer un doute sur l’apparence d’un plat. Meet Your Plate explore l’utilité d’un aperçu visuel avant de commander."
+              },
+              {
+                "title": "Utilisateurs & besoins",
+                "body": "Conçu pour les clients comparant les plats et les restaurateurs mettant à jour leurs menus : comprendre un plat et présenter des informations à jour."
+              },
+              {
+                "title": "Décisions produit & déploiement",
+                "body": "Éditeur de menus avec hébergement de modèles AR. Question produit : l’aperçu réduit-il assez l’incertitude pour justifier l’étape supplémentaire et l’entretien du contenu ?"
+              },
+              {
+                "title": "Parcours",
+                "body": "Menu et modèles ajoutés par le restaurateur → consultation → aperçu AR → choix du plat."
+              },
+              {
+                "title": "Ma contribution",
+                "body": "Création du produit menu et AR présenté dans le portfolio existant. Entretiens clients, adoption et impact commercial non documentés ici."
+              },
+              {
+                "title": "Éléments établis & mesure à venir",
+                "body": "Exploration produit. KPIs à évaluer en pilote ; aucune baisse d’erreurs de commande n’est revendiquée."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Taux de malentendu sur la commande",
+                "definition": "Commandes corrigées pour écart entre attente et plat sélectionné ÷ commandes du pilote, avec une référence initiale."
+              },
+              {
+                "name": "Temps de choix d’un plat",
+                "definition": "Temps médian de l’ouverture du menu au choix, avec la satisfaction pour éviter d’assimiler rapidité et qualité."
+              },
+              {
+                "name": "Utilité de l’aperçu & effort restaurateur",
+                "definition": "Taux de consultation complète, confiance déclarée des clients et temps de création ou modification d’un plat."
+              }
+            ]
+          }
         }
       ]
     },
     "experience": {
       "label": "Parcours",
-      "title": "Un chemin entre ingénierie, produit et stratégie IA.",
+      "title": "Approche produit. Aisance technique.",
       "roles": [
         {
           "company": "Sanofi",
@@ -414,7 +718,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     "contact": {
       "label": "Contact",
       "title": "Construisons quelque chose d’utile.",
-      "sub": "Intéressé par l’IA appliquée, le forward-deployed engineering et les rôles produit proches des utilisateurs et de la réalisation.",
+      "sub": "Ouvert aux rôles produit, stratégie de déploiement IA et solutions en entreprise : besoins utilisateurs, collaboration avec l’ingénierie et adoption.",
       "email": "Email",
       "linkedin": "LinkedIn",
       "resume": "CV"
@@ -424,26 +728,26 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     "capabilities": {
       "label": "Ma méthode",
-      "title": "De la conversation au processus déployé.",
+      "title": "Des besoins utilisateurs à l’adoption quotidienne.",
       "steps": [
         {
           "title": "01 / Comprendre",
-          "body": "Échanger avec les utilisateurs, cartographier le processus et identifier le problème à résoudre."
+          "body": "Échanger avec les utilisateurs et comprendre la tâche, les difficultés et les contraintes."
         },
         {
-          "title": "02 / Construire",
-          "body": "Relier données, modèles, APIs et logique métier dans un produit opérationnel."
+          "title": "02 / Prioriser",
+          "body": "Définir le problème, cadrer le produit et convenir des mesures de succès."
         },
         {
-          "title": "03 / Valider",
-          "body": "Tester les résultats avec les équipes, prévoir les transferts et corriger les écarts."
+          "title": "03 / Coordonner",
+          "body": "Travailler avec l’ingénierie sur les besoins et intégrations ; prototyper avec Cursor si utile."
         },
         {
-          "title": "04 / Livrer",
-          "body": "Déployer la solution et accompagner les personnes qui l’utilisent."
+          "title": "04 / Intégrer",
+          "body": "Valider avec les utilisateurs, déployer dans leur processus et évaluer adoption et résultats."
         }
       ],
-      "skillsLabel": "Mes outils",
+      "skillsLabel": "Outils d’analyse, de prototypage et de déploiement",
       "skills": [
         "Python",
         "SQL",
@@ -457,12 +761,16 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Google Analytics",
         "Jira"
       ]
+    },
+    "caseStudy": {
+      "metricsLabel": "Indicateurs de succès proposés",
+      "metricsNote": "Cadre d’évaluation ; ces indicateurs ne sont pas des résultats mesurés."
     }
   },
   "ar": {
     "meta": {
-      "title": "عتيق سيد — الذكاء الاصطناعي التطبيقي وهندسة المنتجات",
-      "description": "من فهم المستخدم إلى نشر منتجات الذكاء الاصطناعي: سانوفي وNidahAI والأتمتة باستخدام APIs وSnowflake وn8n. باريس."
+      "title": "عتيق سيد — المنتج واستراتيجية نشر الذكاء الاصطناعي",
+      "description": "أفهم سير عمل المستخدم وأحدد أولويات المنتج وأنسق مع فرق الهندسة لنشر حلول مفيدة. أبني النماذج وأكتب الكود بأدوات مثل Cursor عندما يساعد ذلك على تطوير الفكرة."
     },
     "nav": {
       "work": "العمل",
@@ -473,9 +781,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "language": "اللغة"
     },
     "hero": {
-      "role": "ذكاء اصطناعي تطبيقي · هندسة المنتجات · فهم المستخدم",
-      "headline": "أحوّل مشكلات سير العمل إلى منتجات ذكاء اصطناعي عملية.",
-      "sub": "أجمع بين علوم الحاسوب والتفكير المنتج. أعمل مع المستخدمين لفهم المشكلة وبناء التكاملات ومتابعة الحل حتى النشر والاستخدام.",
+      "role": "منتج · استراتيجية نشر الذكاء الاصطناعي · سير عمل المؤسسات",
+      "headline": "أساعد الفرق على تحويل احتياجات المستخدمين إلى حلول تناسب سير عملهم.",
+      "sub": "أفهم سير عمل المستخدم وأحدد أولويات المنتج وأنسق مع فرق الهندسة لنشر حلول مفيدة. أبني النماذج وأكتب الكود بأدوات مثل Cursor عندما يساعد ذلك على تطوير الفكرة.",
       "email": "راسلني",
       "resume": "تحميل السيرة",
       "basedIn": "باريس، فرنسا",
@@ -483,51 +791,84 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     "about": {
       "label": "نبذة",
-      "title": "قريب من المستخدم. مشارك في البناء.",
+      "title": "فهم سير العمل هو بداية المنتج.",
       "p1": "يجمع مساري بين علوم الحاسوب في SRM University AP وتقنيات الدفع في Fiserv وماجستير الإدارة في ESSEC بين سنغافورة وباريس. أستمتع بتحويل مشكلات الأعمال إلى حلول قابلة للبناء.",
       "p2": "في سانوفي، عملت مع فرق المنتج والهندسة والأعمال لتحويل عقبات التطوير المتكررة إلى منتج ذكاء اصطناعي داخلي. وفي KidSpass.Asia، ساهمت محادثات الشركاء والعملاء في إعادة تصميم تجربة الانضمام مع الفريق المؤسس.",
-      "p3": "تعكس مشاريعي اهتماماتي: الواجهات الصوتية ووكلاء الذكاء الاصطناعي والأتمتة المتصلة بأنظمة فعلية. أبحث عن عمل يجمع فهم العملاء والتنفيذ التقني والتحسين بعد الإطلاق."
+      "p3": "اهتماماتي هي المنتج واستراتيجية النشر: فهم عمل الناس وتحديد احتياجات الحل ودعم تبنيه. أستطيع بناء نماذج وكتابة الكود باستخدام Cursor مع التنسيق مع فرق الهندسة. تستكشف مشاريعي الوصول الصوتي للخدمات وعمليات المحتوى ودعم القرار بصرياً."
     },
     "work": {
       "label": "أعمال مختارة",
-      "title": "فهم سير العمل. بناء الحل.",
+      "title": "فهم سير العمل هو بداية المنتج.",
       "items": [
         {
           "name": "سانوفي — منتج ذكاء اصطناعي داخلي",
           "tag": "اكتشاف ← تكامل ← نشر",
           "status": "منشور داخلياً",
           "summary": "كانت الفرق تعيد بناء مكونات موجودة. قدت منتجاً داخلياً من الاكتشاف إلى النشر لمساعدة الفرق على العثور على العمل القائم وإعادة استخدامه.",
-          "points": [
-            "الاكتشاف: جلسات مع أكثر من 20 فريقاً لفهم سير العمل والعقبات وفرص إعادة الاستخدام.",
-            "البناء: ربط APIs من GitHub والبيانات التجارية الداخلية وSnowflake Cortex.",
-            "التسليم: التحقق من النتائج مع فرق المنتج والهندسة والأعمال وتحسين الحل ودعم استخدامه.",
-            "النتيجة: تمكين إعادة استخدام المكونات لتقليل تكرار التطوير وجهد الاستثمار."
-          ],
+          "points": [],
           "stack": [
             "GitHub APIs",
             "Snowflake Cortex",
             "Internal datasets"
           ],
-          "detailLabel": "تفاصيل العمل"
+          "detailLabel": "اقرأ دراسة حالة المنتج",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "منطق المنتج",
+                "body": "تكرار التطوير كان مشكلة في سير العمل: العثور على المكونات القابلة لإعادة الاستخدام قبل تخصيص الوقت والميزانية. وجّهت جلسات مع أكثر من 20 فريقاً المنتج الداخلي."
+              },
+              {
+                "title": "المستخدمون واحتياجاتهم",
+                "body": "فرق المنتج والهندسة والأعمال الداخلية التي تقيّم مبادرات الذكاء الاصطناعي: العثور على مكونات مناسبة وتقييم إعادة استخدامها وتحديد نطاق الحل."
+              },
+              {
+                "title": "قرارات المنتج والنشر",
+                "body": "ربط GitHub APIs والبيانات التجارية الداخلية وSnowflake Cortex. تحويل الاحتياجات إلى قدرات والتحقق من النتائج مع الفرق وتحسينها ودعم الاستخدام."
+              },
+              {
+                "title": "سير العمل",
+                "body": "مبادرة ← البحث عن مكونات ← تقييم الملاءمة ← إعادة الاستخدام ← التحقق والتبني."
+              },
+              {
+                "title": "مساهمتي",
+                "body": "قيادة الاكتشاف والنشر الكامل والتنسيق مع فرق المنتج والهندسة والأعمال وبناء الحل."
+              },
+              {
+                "title": "ما ثبت وما يحتاج القياس",
+                "body": "منشور داخلياً؛ شمل الاكتشاف أكثر من 20 فريقاً. لا أدّعي وفورات رقمية في الوقت أو الاستثمار."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "معدل إعادة الاستخدام الناجح",
+                "definition": "مبادرات أعادت استخدام مكون مناسب ÷ المبادرات المقيمة."
+              },
+              {
+                "name": "وقت العثور على مكون مفيد",
+                "definition": "الوقت الوسيط من طلب البحث إلى تطابق توافق عليه الفرق."
+              },
+              {
+                "name": "التبني والملاءمة",
+                "definition": "الاستخدام المتكرر من الفرق المستهدفة ونسبة التوصيات التي تُعد مناسبة."
+              }
+            ]
+          }
         }
       ]
     },
     "projects": {
-      "label": "مشاريع شخصية",
-      "title": "أنظمة أبنيها خارج عملي اليومي.",
-      "intro": "مشاريع مستقلة في الذكاء الاصطناعي الصوتي والأتمتة تربط سير العمل بالإجراءات والتكاملات والقرارات البشرية.",
+      "label": "دراسات حالة للمنتجات",
+      "title": "المستخدم والمشكلة وقرارات المنتج.",
+      "intro": "لمن صُمم كل منتج وما الذي يغيره ودوري وكيف أقيم نجاحه.",
       "visit": "زيارة الموقع",
       "items": [
         {
           "name": "NidahAI",
-          "tag": "ذكاء اصطناعي صوتي · مشروع مستقل",
+          "tag": "الوصول للخدمة · ذكاء صوتي",
           "status": "وكيل صوتي في الإنتاج",
           "summary": "وكيل صوتي للمحادثات الواردة يفهم نية المستخدم ويدير خطوات متعددة وينفذ إجراءات عبر APIs وwebhooks.",
-          "points": [
-            "المشكلة: تحويل المحادثة الواردة إلى مهمة مكتملة.",
-            "ما بنيته: منطق المحادثة والتوجيه والتكامل الهاتفي والجدولة والتحويل إلى موظف.",
-            "المسار: مكالمة ← نية ← سير عمل ← إجراء API أو تحويل بشري."
-          ],
+          "points": [],
           "href": "https://nidahai.com/",
           "linkLabel": "استكشف NidahAI",
           "stack": [
@@ -536,19 +877,56 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "APIs",
             "Webhooks"
           ],
-          "detailLabel": "استكشف البناء"
+          "detailLabel": "اقرأ دراسة حالة المنتج",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "منطق المنتج",
+                "body": "ينبغي أن تساعد المحادثة الصوتية الشخص في الوصول إلى الخدمة وإنجاز المهمة. يربط NidahAI التفاعل بسير عمل تشغيلي مع إمكانية طلب مساعدة بشرية."
+              },
+              {
+                "title": "المستخدمون واحتياجاتهم",
+                "body": "مصمم للمتصلين الذين يحتاجون معلومات أو مساعدة في المواعيد ولفرق تشغيل العيادات. حل الطلب دون تكرار شرح المعلومات."
+              },
+              {
+                "title": "قرارات المنتج والنشر",
+                "body": "ربط منطق المحادثة بالهاتف والجدولة وAPIs وwebhooks مع التحويل إلى موظف. تقييم دقة الإجراءات وسرعة الوصول إلى الخدمة."
+              },
+              {
+                "title": "سير العمل",
+                "body": "مكالمة ← فهم النية ← معلومات أو موعد ← تأكيد ← تحويل بشري عند الحاجة."
+              },
+              {
+                "title": "مساهمتي",
+                "body": "تصميم وبناء وإطلاق مستقل يشمل التوجيه ومنطق المحادثة والتكاملات والجدولة والتحويل البشري."
+              },
+              {
+                "title": "ما ثبت وما يحتاج القياس",
+                "body": "وكيل صوتي في الإنتاج وفق السيرة. المؤشرات مقترحة؛ لا توجد أرقام لحجم المكالمات أو الدقة أو توفير الوقت."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "معدل أخطاء الطلبات",
+                "definition": "إجراءات خاطئة أو غير مكتملة ÷ الإجراءات المجربة، مع فصل أخطاء فهم النية عن التنفيذ."
+              },
+              {
+                "name": "وقت الوصول إلى الخدمة",
+                "definition": "الوسيط والمئين التسعون من بداية المكالمة إلى استجابة مفيدة أو اتصال بالموظف المناسب."
+              },
+              {
+                "name": "الحل وجودة التحويل",
+                "definition": "طلبات حُلّت بصورة صحيحة دون اتصال متكرر؛ اتصالات بشرية ناجحة ÷ محاولات التحويل."
+              }
+            ]
+          }
         },
         {
           "name": "Business Explainer",
-          "tag": "أتمتة بالذكاء الاصطناعي · مشروع مستقل",
+          "tag": "عمليات المحتوى · موافقة بشرية",
           "status": "قيد التطوير",
           "summary": "نظام يختار موضوعات تعليمية عن الأعمال ويولد محتوى Instagram وتصاميم المنشورات ويرسل معاينات إلى WhatsApp للموافقة البشرية.",
-          "points": [
-            "المشكلة: ربط إنشاء المحتوى والمراجعة والنشر في سير عمل مضبوط.",
-            "ما بنيته: مسارات الموافقة والرفض وإعادة التوليد وانتهاء الصلاحية والنشر باستخدام n8n وAWS وتكاملات Meta.",
-            "المسار: موضوع ← محتوى وتصاميم ← معاينة WhatsApp ← موافقة ← نشر.",
-            "قرار التصميم: موافقة بشرية قبل النشر."
-          ],
+          "points": [],
           "stack": [
             "n8n",
             "AWS AI",
@@ -556,30 +934,110 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "WhatsApp",
             "Webhooks"
           ],
-          "detailLabel": "استكشف البناء"
+          "detailLabel": "اقرأ دراسة حالة المنتج",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "منطق المنتج",
+                "body": "إنتاج المحتوى يشمل اختيار الموضوع والتحقق والمراجعة والموافقة. يربط المنتج هذه الخطوات مع إبقاء القرار التحريري بيد الإنسان."
+              },
+              {
+                "title": "المستخدمون واحتياجاتهم",
+                "body": "مصمم لصانع أو مشغل المحتوى التعليمي عن الأعمال، والمتعلمون هم الجمهور المقصود. مراجعة المحتوى ونشره دون نقل يدوي بين أدوات منفصلة."
+              },
+              {
+                "title": "قرارات المنتج والنشر",
+                "body": "WhatsApp واجهة للمراجعة مع موافقة بشرية قبل النشر ومسارات واضحة للموافقة والرفض وإعادة التوليد وانتهاء الصلاحية."
+              },
+              {
+                "title": "سير العمل",
+                "body": "موضوع ← محتوى وتصاميم ← معاينة WhatsApp ← موافقة أو رفض أو إعادة توليد ← نشر؛ انتهاء صلاحية الطلبات القديمة."
+              },
+              {
+                "title": "مساهمتي",
+                "body": "تصميم وبناء جارٍ باستخدام n8n وAWS AI وAPIs وwebhooks وتكاملات Meta WhatsApp/Instagram."
+              },
+              {
+                "title": "ما ثبت وما يحتاج القياس",
+                "body": "قيد التطوير. المؤشرات مقترحة وليست نتائج محققة أو ادعاءً بوجود جمهور."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "زمن الموافقة إلى النشر",
+                "definition": "الوقت الوسيط من الموافقة البشرية إلى النشر الناجح، مع قياس وقت إعداد المعاينة منفصلاً."
+              },
+              {
+                "name": "موثوقية النشر",
+                "definition": "منشورات معتمدة نُشرت بصورة صحيحة ÷ المنشورات المعتمدة، مع متابعة التكرار والفشل."
+              },
+              {
+                "name": "جهد المراجعة وجودة المحتوى",
+                "definition": "الدقائق اليدوية لكل منشور معتمد ونسبة الموافقة من المرة الأولى والتصحيحات الواقعية اللازمة."
+              }
+            ]
+          }
         },
         {
           "name": "Meet Your Plate",
-          "tag": "منتج · تجربة واقع معزز",
+          "tag": "اختيار الأطباق · قوائم AR",
           "href": "https://www.meetyourplate.com/",
           "summary": "منصة يبني فيها أصحاب المطاعم قوائمهم ويستضيفون نماذج واقع معزز لتجربة أغنى قبل الطلب.",
-          "points": [
-            "منشئ قوائم للمطاعم",
-            "استضافة نماذج AR للأطباق",
-            "تجربة اكتشاف أغنى للطعام"
-          ],
+          "points": [],
           "status": "استكشاف إضافي للمنتجات",
           "stack": [
             "AR",
             "Menus"
           ],
-          "detailLabel": "استكشف البناء"
+          "detailLabel": "اقرأ دراسة حالة المنتج",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "منطق المنتج",
+                "body": "قد تترك أوصاف القائمة شكاً حول شكل الطبق. يستكشف Meet Your Plate كيف تساعد المعاينة البصرية على اختيار أكثر ثقة قبل الطلب."
+              },
+              {
+                "title": "المستخدمون واحتياجاتهم",
+                "body": "مصمم للزبائن الذين يقارنون الأطباق وأصحاب المطاعم الذين يحدثون قوائمهم: فهم الطبق وعرض معلومات حديثة."
+              },
+              {
+                "title": "قرارات المنتج والنشر",
+                "body": "محرر قوائم مع نماذج AR مستضافة. هل تقلل المعاينة الغموض بما يكفي لتبرير الخطوة الإضافية للزبون وجهد تحديث المحتوى للمطعم؟"
+              },
+              {
+                "title": "سير العمل",
+                "body": "إضافة القائمة والنماذج ← تصفح الأطباق ← معاينة AR ← اختيار الطلب."
+              },
+              {
+                "title": "مساهمتي",
+                "body": "إنشاء منتج القوائم وAR المعروض في المحفظة القائمة. لا تتوفر هنا بيانات مقابلات العملاء أو التبني أو الأثر التجاري."
+              },
+              {
+                "title": "ما ثبت وما يحتاج القياس",
+                "body": "استكشاف منتج. تحتاج المؤشرات تجربة في مطاعم؛ لا تدّعي المحفظة انخفاض أخطاء الطلبات."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "معدل سوء فهم الطلب",
+                "definition": "طلبات صُححت بسبب اختلاف التوقع عن الطبق المختار ÷ طلبات التجربة، بالمقارنة مع خط أساس."
+              },
+              {
+                "name": "وقت اختيار الطبق",
+                "definition": "الوقت الوسيط من فتح القائمة إلى الاختيار، مع قياس الرضا وعدم افتراض أن الأسرع أفضل."
+              },
+              {
+                "name": "فائدة المعاينة وجهد المطعم",
+                "definition": "نسبة إكمال المعاينة وثقة الزبون ووقت إنشاء أو تحديث عنصر القائمة."
+              }
+            ]
+          }
         }
       ]
     },
     "experience": {
       "label": "الخبرة",
-      "title": "مسار عبر الهندسة والمنتج واستراتيجية الذكاء الاصطناعي.",
+      "title": "تفكير المنتج. إلمام تقني.",
       "roles": [
         {
           "company": "Sanofi",
@@ -643,7 +1101,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     "contact": {
       "label": "تواصل",
       "title": "لنبنِ شيئاً مفيداً.",
-      "sub": "مهتم بالذكاء الاصطناعي التطبيقي والهندسة القريبة من العملاء وأدوار المنتج التي تجمع التواصل مع المستخدم والتنفيذ.",
+      "sub": "مهتم بأدوار المنتج واستراتيجية نشر الذكاء الاصطناعي وحلول المؤسسات التي تجمع فهم المستخدم والتعاون مع الهندسة والتبني.",
       "email": "البريد",
       "linkedin": "لينكدإن",
       "resume": "السيرة"
@@ -653,26 +1111,26 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     "capabilities": {
       "label": "طريقة عملي",
-      "title": "من المحادثة إلى سير عمل منشور.",
+      "title": "من احتياجات المستخدم إلى الاستخدام اليومي.",
       "steps": [
         {
-          "title": "01 / اكتشاف",
-          "body": "التحدث مع المستخدمين وفهم سير العمل وتحديد المشكلة التي تستحق الحل."
+          "title": "01 / فهم",
+          "body": "التحدث مع المستخدم وفهم المهمة والعقبات والقيود قبل اختيار الحل."
         },
         {
-          "title": "02 / بناء",
-          "body": "ربط البيانات والنماذج وAPIs ومنطق الأعمال في منتج عملي."
+          "title": "02 / أولويات",
+          "body": "تحديد المشكلة ونطاق المنتج ومقاييس النجاح."
         },
         {
-          "title": "03 / تحقق",
-          "body": "اختبار النتائج مع الفرق وإدارة التحويل البشري وتحسين الثغرات."
+          "title": "03 / تنسيق",
+          "body": "التعاون مع الهندسة على المتطلبات والتكاملات وبناء نماذج بـ Cursor عند الحاجة."
         },
         {
-          "title": "04 / تسليم",
-          "body": "نشر الحل ودعم الأشخاص الذين يستخدمونه."
+          "title": "04 / تبني",
+          "body": "التحقق مع المستخدم والنشر في سير العمل وتقييم الاستخدام والنتائج."
         }
       ],
-      "skillsLabel": "أدوات أستخدمها",
+      "skillsLabel": "أدوات التحليل والنماذج والنشر",
       "skills": [
         "Python",
         "SQL",
@@ -686,6 +1144,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Google Analytics",
         "Jira"
       ]
+    },
+    "caseStudy": {
+      "metricsLabel": "مؤشرات نجاح مقترحة",
+      "metricsNote": "إطار تقييم؛ هذه المؤشرات ليست نتائج مقاسة."
     }
   }
 };

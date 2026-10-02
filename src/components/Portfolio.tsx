@@ -8,6 +8,7 @@ import { InteractiveItem } from "./InteractiveItem";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MagneticButton } from "./MagneticButton";
 import { Reveal } from "./Reveal";
+import { ProductCaseStudy } from "./ProductCaseStudy";
 import { ScrollProgress } from "./ScrollProgress";
 
 export function Portfolio() {
@@ -86,7 +87,7 @@ export function Portfolio() {
                 <strong>{step.title}</strong><p>{step.body}</p>
               </div>
             ))}
-            <p className="pipeline-foot">Python / SQL / APIs / n8n / Snowflake</p>
+            <p className="pipeline-foot">Cursor / Power BI / SQL / n8n / Snowflake</p>
           </aside>
         </HeroParallax>
 
@@ -107,11 +108,10 @@ export function Portfolio() {
                     <span className="work-status">{item.status}</span>
                     <h3 className="work-item__name">{item.name}</h3>
                     <p className="work-item__summary">{item.summary}</p>
-                    <ul className="work-item__points">
-                      {item.points.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
+                    <details className="project-details" open>
+                      <summary>{item.detailLabel}</summary>
+                      <ProductCaseStudy item={item} labels={dict.caseStudy} />
+                    </details>
                   </div>
                 </InteractiveItem>
               </Reveal>
@@ -139,11 +139,9 @@ export function Portfolio() {
                   <ul className="stack-list" aria-label={dict.capabilities.skillsLabel}>
                     {item.stack.map((tool) => <li key={tool}>{tool}</li>)}
                   </ul>
-                  <details className="project-details" open={i < 2}>
+                  <details className="project-details" open>
                     <summary>{item.detailLabel}</summary>
-                    <ul className="work-item__points">
-                      {item.points.map((point) => <li key={point}>{point}</li>)}
-                    </ul>
+                    <ProductCaseStudy item={item} labels={dict.caseStudy} />
                   </details>
                   {item.href && <a href={item.href} target="_blank" rel="noopener noreferrer" className="project-visit">{item.linkLabel ?? dict.projects.visit} <span aria-hidden="true">↗</span></a>}
                 </InteractiveItem>
