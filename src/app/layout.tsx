@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Noto_Sans_Arabic, Source_Sans_3 } from "next/font/google";
+import { dictionaries } from "@/i18n/dictionaries";
 import { LocaleProvider } from "@/i18n/LocaleProvider";
 import "./globals.css";
 
@@ -20,14 +21,15 @@ const notoArabic = Noto_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "Atheeq Syed — AI Strategy & Product",
-  description:
-    "AI strategist, product manager, and AI vibe coder — from strategy decks to working PoCs. Based in Paris.",
+  metadataBase: new URL("https://atheeqsyed-portfolio.vercel.app"),
+  title: dictionaries.en.meta.title,
+  description: dictionaries.en.meta.description,
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Atheeq Syed — AI Strategy & Product",
-    description:
-      "AI strategist, product manager, and AI vibe coder — from strategy decks to working PoCs.",
+    title: dictionaries.en.meta.title,
+    description: dictionaries.en.meta.description,
     type: "website",
+    url: "/",
   },
 };
 

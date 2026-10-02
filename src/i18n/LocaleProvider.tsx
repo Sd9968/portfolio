@@ -6,7 +6,7 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useState,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
 import { dictionaries } from "./dictionaries";
@@ -27,22 +27,32 @@ function isLocale(value: string | null): value is Locale {
   return value === "en" || value === "fr" || value === "ar";
 }
 
+function subscribeLocale(callback: () => void) {
+  window.addEventListener("storage", callback);
+  window.addEventListener("atheeq-locale-change", callback);
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener("atheeq-locale-change", callback);
+  };
+}
+
+let selectedLocale: Locale | null = null;
+
+function getLocale(): Locale {
+  if (selectedLocale) return selectedLocale;
+  let stored: string | null = null;
+  try { stored = window.localStorage.getItem(STORAGE_KEY); } catch { /* Storage may be disabled. */ }
+  if (isLocale(stored)) return stored;
+  const browser = navigator.language.slice(0, 2);
+  return isLocale(browser) ? browser : "en";
+}
+
 export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("en");
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (isLocale(stored)) {
-      setLocaleState(stored);
-      return;
-    }
-    const browser = navigator.language.slice(0, 2);
-    if (isLocale(browser)) setLocaleState(browser);
-  }, []);
-
+  const locale = useSyncExternalStore(subscribeLocale, getLocale, () => "en" as Locale);
   const setLocale = useCallback((next: Locale) => {
-    setLocaleState(next);
-    window.localStorage.setItem(STORAGE_KEY, next);
+    selectedLocale = next;
+    try { window.localStorage.setItem(STORAGE_KEY, next); } catch { /* Keep the interface usable without persistent storage. */ }
+    window.dispatchEvent(new Event("atheeq-locale-change"));
   }, []);
 
   const dir: "ltr" | "rtl" = locale === "ar" ? "rtl" : "ltr";

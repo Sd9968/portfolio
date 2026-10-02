@@ -5,6 +5,9 @@ export type WorkItem = {
   tag: string;
   summary: string;
   points: string[];
+  status: string;
+  stack: string[];
+  detailLabel: string;
   href?: string;
   linkLabel?: string;
 };
@@ -23,6 +26,7 @@ export type Dictionary = {
     language: string;
   };
   hero: {
+    selectedWork: string;
     role: string;
     headline: string;
     sub: string;
@@ -48,6 +52,13 @@ export type Dictionary = {
     intro: string;
     visit: string;
     items: WorkItem[];
+  };
+  capabilities: {
+    label: string;
+    title: string;
+    skillsLabel: string;
+    skills: string[];
+    steps: Array<{ title: string; body: string }>;
   };
   experience: {
     label: string;
