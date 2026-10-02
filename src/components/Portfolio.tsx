@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
 import { EMAIL, LINKEDIN, RESUME_HREF } from "@/i18n/dictionaries";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { useActiveSection } from "@/hooks/useActiveSection";
@@ -10,13 +8,12 @@ import { InteractiveItem } from "./InteractiveItem";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MagneticButton } from "./MagneticButton";
 import { Reveal } from "./Reveal";
+import { ProductCaseStudy } from "./ProductCaseStudy";
 import { ScrollProgress } from "./ScrollProgress";
-import { SignalField } from "./SignalField";
 
 export function Portfolio() {
   const { dict } = useLocale();
   const active = useActiveSection();
-  const [openProject, setOpenProject] = useState<string | null>("NidahAI");
 
   const navLinks = [
     { id: "work", label: dict.nav.work },
@@ -28,6 +25,7 @@ export function Portfolio() {
 
   return (
     <>
+      <a className="skip-link" href="#work">{dict.hero.selectedWork}</a>
       <ScrollProgress />
       <header className="site-header">
         <LanguageSwitcher />
@@ -47,24 +45,12 @@ export function Portfolio() {
 
       <main>
         <HeroParallax>
-          <div className="hero__media" aria-hidden="true">
-            <Image
-              src="/images/hero-ai-ops-meeting.jpg"
-              alt=""
-              fill
-              priority
-              sizes="100vw"
-              className="hero__photo"
-            />
-            <SignalField />
-            <div className="hero__spotlight" />
-          </div>
-          <div className="hero__veil" aria-hidden="true" />
+          <div className="hero__grid" aria-hidden="true" />
           <div className="hero__content">
             <p className="hero__role anim-fade-up" style={{ animationDelay: "80ms" }}>
               {dict.hero.role}
             </p>
-            <h1 className="hero__brand anim-fade-up" style={{ animationDelay: "160ms" }}>
+            <h1 dir="ltr" className="hero__brand anim-fade-up" style={{ animationDelay: "160ms" }}>
               <span className="hero__brand-line">Atheeq</span>{" "}
               <span className="hero__brand-line">Syed</span>
             </h1>
@@ -75,8 +61,8 @@ export function Portfolio() {
               {dict.hero.sub}
             </p>
             <div className="hero__cta anim-fade-up" style={{ animationDelay: "460ms" }}>
-              <MagneticButton className="btn btn--primary" href={`mailto:${EMAIL}`}>
-                {dict.hero.email}
+              <MagneticButton className="btn btn--primary" href="#work">
+                {dict.hero.selectedWork}
               </MagneticButton>
               <MagneticButton
                 className="btn btn--ghost"
@@ -93,6 +79,16 @@ export function Portfolio() {
               <span className="hero__scroll-dot" />
             </a>
           </div>
+          <aside className="hero__pipeline" aria-label={dict.capabilities.title}>
+            <p className="section__label">{dict.capabilities.label}</p>
+            <p className="hero__pipeline-title">{dict.capabilities.title}</p>
+            {dict.capabilities.steps.map((step) => (
+              <div className="pipeline-step" key={step.title}>
+                <strong>{step.title}</strong><p>{step.body}</p>
+              </div>
+            ))}
+            <p className="pipeline-foot">Cursor / Power BI / SQL / n8n / Snowflake</p>
+          </aside>
         </HeroParallax>
 
         <section id="work" className="section work">
@@ -109,13 +105,13 @@ export function Portfolio() {
                   </div>
                   <div className="work-item__body">
                     <p className="work-item__tag">{item.tag}</p>
+                    <span className="work-status">{item.status}</span>
                     <h3 className="work-item__name">{item.name}</h3>
                     <p className="work-item__summary">{item.summary}</p>
-                    <ul className="work-item__points">
-                      {item.points.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
+                    <details className="project-details" open>
+                      <summary>{item.detailLabel}</summary>
+                      <ProductCaseStudy item={item} labels={dict.caseStudy} />
+                    </details>
                   </div>
                 </InteractiveItem>
               </Reveal>
@@ -129,57 +125,28 @@ export function Portfolio() {
             <h2 className="section__title">{dict.projects.title}</h2>
             <p className="projects__intro">{dict.projects.intro}</p>
           </Reveal>
-          <div className="work__list">
-            {dict.projects.items.map((item, i) => {
-              const isOpen = openProject === item.name;
-              return (
-                <Reveal key={item.name} delay={i * 80}>
-                  <InteractiveItem
-                    className={`work-item work-item--project${isOpen ? " is-open" : ""}`}
-                  >
-                    <button
-                      type="button"
-                      className="work-item__toggle"
-                      aria-expanded={isOpen}
-                      onClick={() =>
-                        setOpenProject((prev) => (prev === item.name ? null : item.name))
-                      }
-                    >
-                      <div className="work-item__index" aria-hidden="true">
-                        {String(i + 1).padStart(2, "0")}
-                      </div>
-                      <div className="work-item__body">
-                        <p className="work-item__tag">{item.tag}</p>
-                        <h3 className="work-item__name">
-                          {item.name}
-                          <span className="work-item__chev" aria-hidden="true" />
-                        </h3>
-                        <p className="work-item__summary">{item.summary}</p>
-                        <div className="work-item__details">
-                          <ul className="work-item__points">
-                            {item.points.map((point) => (
-                              <li key={point}>{point}</li>
-                            ))}
-                          </ul>
-                          {item.href && (
-                            <a
-                              href={item.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="project-visit"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              {dict.projects.visit}
-                              <span aria-hidden="true"> →</span>
-                            </a>
-                          )}
-                        </div>
-                      </div>
-                    </button>
-                  </InteractiveItem>
-                </Reveal>
-              );
-            })}
+          <div className="project-grid">
+            {dict.projects.items.map((item, i) => (
+              <Reveal key={item.name} delay={i * 80}>
+                <InteractiveItem className="project-card">
+                  <div className="project-card__top">
+                    <span className="work-item__index" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="work-status">{item.status}</span>
+                  </div>
+                  <p className="work-item__tag">{item.tag}</p>
+                  <h3 className="work-item__name">{item.name}</h3>
+                  <p className="work-item__summary">{item.summary}</p>
+                  <ul className="stack-list" aria-label={dict.capabilities.skillsLabel}>
+                    {item.stack.map((tool) => <li key={tool}>{tool}</li>)}
+                  </ul>
+                  <details className="project-details" open>
+                    <summary>{item.detailLabel}</summary>
+                    <ProductCaseStudy item={item} labels={dict.caseStudy} />
+                  </details>
+                  {item.href && <a href={item.href} target="_blank" rel="noopener noreferrer" className="project-visit">{item.linkLabel ?? dict.projects.visit} <span aria-hidden="true">↗</span></a>}
+                </InteractiveItem>
+              </Reveal>
+            ))}
           </div>
         </section>
 
@@ -194,6 +161,14 @@ export function Portfolio() {
               <p>{dict.about.p2}</p>
               <p>{dict.about.p3}</p>
             </div>
+          </Reveal>
+        </section>
+
+        <section className="section capabilities">
+          <Reveal>
+            <p className="section__label">{dict.capabilities.skillsLabel}</p>
+            <h2 className="section__title">{dict.capabilities.title}</h2>
+            <ul className="skills-list">{dict.capabilities.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul>
           </Reveal>
         </section>
 

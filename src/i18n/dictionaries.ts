@@ -1,465 +1,1156 @@
 import type { Dictionary, Locale } from "./types";
 
-const en: Dictionary = {
-  meta: {
-    title: "Atheeq Syed — AI Strategy & Product",
-    description:
-      "AI strategist, product manager, and AI vibe coder — from strategy decks to working PoCs. Based in Paris.",
+export const dictionaries: Record<Locale, Dictionary> = {
+  "en": {
+    "meta": {
+      "title": "Atheeq Syed — Product & AI Deployment Strategy",
+      "description": "I understand user workflows, shape product priorities, and coordinate with engineering teams to deploy useful solutions. When it helps move an idea forward, I prototype and code with tools like Cursor."
+    },
+    "nav": {
+      "work": "Work",
+      "projects": "Projects",
+      "about": "About",
+      "experience": "Experience",
+      "contact": "Contact",
+      "language": "Language"
+    },
+    "hero": {
+      "role": "Product · AI Deployment Strategy · Enterprise Workflows",
+      "headline": "I help teams turn user needs into solutions that fit their workflows.",
+      "sub": "I understand user workflows, shape product priorities, and coordinate with engineering teams to deploy useful solutions. When it helps move an idea forward, I prototype and code with tools like Cursor.",
+      "email": "Let’s talk",
+      "resume": "Download resume",
+      "basedIn": "Paris, France",
+      "selectedWork": "Explore my work"
+    },
+    "about": {
+      "label": "About",
+      "title": "Understanding the workflow is where the product starts.",
+      "p1": "My path connects computer science at SRM University AP, payments technology at Fiserv, and a Master in Management at ESSEC across Singapore and Paris. I enjoy the point where a business problem becomes something concrete enough to build.",
+      "p2": "At Sanofi, I worked with product, engineering, and business teams to turn recurring development bottlenecks into an internal AI product. At KidSpass.Asia, conversations with partners and customers helped reshape onboarding with the founding team.",
+      "p3": "I’m interested in product and deployment strategy: understanding how people work, deciding what a solution needs to do, and helping teams adopt it. I can prototype and code using Cursor, alongside coordinating with engineering teams. My projects let me explore voice-based service access, content operations, and visual decision support."
+    },
+    "work": {
+      "label": "Selected work",
+      "title": "Understanding the workflow is where the product starts.",
+      "items": [
+        {
+          "name": "Sanofi — internal AI product",
+          "tag": "Discovery → Integration → Deployment",
+          "summary": "Teams were rebuilding components that already existed. I led an internal AI product from discovery through deployment to help teams find and reuse existing work.",
+          "points": [],
+          "status": "Deployed internally",
+          "stack": [
+            "GitHub APIs",
+            "Snowflake Cortex",
+            "Internal datasets"
+          ],
+          "detailLabel": "Read the product case study",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Product rationale",
+                "body": "Repeated development was a workflow problem: teams needed to discover reusable work before committing time and budget to rebuilding. Discovery across 20+ teams informed the internal product."
+              },
+              {
+                "title": "Users & jobs to be done",
+                "body": "Internal product, engineering, and business teams evaluating AI initiatives. Their job: find relevant components, assess reuse, and move from an idea to a scoped solution."
+              },
+              {
+                "title": "Product & deployment decisions",
+                "body": "Brought GitHub APIs, internal commercial datasets, and Snowflake Cortex into the workflow. Worked with stakeholders to translate needs into capabilities, validate outputs, iterate on gaps, and support adoption."
+              },
+              {
+                "title": "Workflow",
+                "body": "New initiative → find existing components → assess fit with stakeholders → reuse where appropriate → validate and adopt."
+              },
+              {
+                "title": "My contribution",
+                "body": "Led discovery and end-to-end deployment, coordinated with product, engineering, and business stakeholders, and built the solution."
+              },
+              {
+                "title": "Evidence & next measurement",
+                "body": "Deployed internally; discovery covered 20+ teams. Component reuse is supported by the resume; no quantified time or investment savings are claimed."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Successful reuse rate",
+                "definition": "Initiatives that reuse a suitable existing component ÷ initiatives assessed."
+              },
+              {
+                "name": "Time to identify a usable component",
+                "definition": "Median time from a reuse request to a stakeholder-validated match."
+              },
+              {
+                "name": "Adoption & relevance",
+                "definition": "Repeat use by target teams; proportion of suggested components judged relevant."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "projects": {
+      "label": "Product case studies",
+      "title": "The user, the problem, and the product decisions.",
+      "intro": "A closer look at who each product serves, the workflow it changes, my contribution, and how I would evaluate success.",
+      "visit": "Visit site",
+      "items": [
+        {
+          "name": "NidahAI",
+          "tag": "Service access · Voice AI",
+          "status": "Production voice agent",
+          "summary": "An inbound voice AI agent that identifies intent, handles multi-step conversations, and triggers actions through APIs and webhooks.",
+          "points": [],
+          "href": "https://nidahai.com/",
+          "linkLabel": "Explore NidahAI",
+          "stack": [
+            "Voice AI",
+            "Telephony",
+            "APIs",
+            "Webhooks"
+          ],
+          "detailLabel": "Read the product case study",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Product rationale",
+                "body": "A voice conversation should help someone reach a service and complete a task. NidahAI explores how to turn that interaction into an operational workflow with a route to human help."
+              },
+              {
+                "title": "Users & jobs to be done",
+                "body": "Designed for callers seeking clinic information or appointment support, and operations teams handling those requests. The caller’s job: reach the right service and resolve the request without repeated explanations."
+              },
+              {
+                "title": "Product & deployment decisions",
+                "body": "Connected conversation logic to telephony, scheduling, APIs, and webhooks. Included human handoff for requests requiring staff involvement. The product should be assessed on task accuracy and service access."
+              },
+              {
+                "title": "Workflow",
+                "body": "Inbound call → identify intent → answer or manage appointment → confirm the action → hand off when needed."
+              },
+              {
+                "title": "My contribution",
+                "body": "Independently designed, built, and launched the voice agent, including prompting, conversation logic, integrations, scheduling workflows, and human handoff."
+              },
+              {
+                "title": "Evidence & next measurement",
+                "body": "Production voice agent according to the resume. The KPIs below are proposed measures; no call volumes, accuracy rates, or time savings are reported."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Request error rate",
+                "definition": "Incorrect or incomplete appointment/service actions ÷ attempted actions; separate intent errors from action errors."
+              },
+              {
+                "name": "Time to reach the service",
+                "definition": "Median and 90th-percentile time from call start to a useful response or connection to the appropriate human."
+              },
+              {
+                "name": "Resolution & handoff quality",
+                "definition": "Requests completed correctly without repeat contact; successful human connections ÷ handoff attempts."
+              }
+            ]
+          }
+        },
+        {
+          "name": "Business Explainer",
+          "tag": "Content operations · Human approval",
+          "status": "In development",
+          "summary": "An AI content workflow that selects educational business topics, generates Instagram content and assets, and sends previews to WhatsApp for human approval.",
+          "points": [],
+          "stack": [
+            "n8n",
+            "AWS AI",
+            "Meta APIs",
+            "WhatsApp",
+            "Webhooks"
+          ],
+          "detailLabel": "Read the product case study",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Product rationale",
+                "body": "Content production involves several decisions beyond generating text: choosing a topic, checking quality, reviewing assets, and approving publication. The product connects these steps while retaining human editorial control."
+              },
+              {
+                "title": "Users & jobs to be done",
+                "body": "Designed for the creator or operator managing business education content, with learners as the intended audience. The operator’s job: review and publish useful content without moving manually between disconnected tools."
+              },
+              {
+                "title": "Product & deployment decisions",
+                "body": "Used WhatsApp as the review surface and a human approval gate before publishing. Designed explicit approval, rejection, regeneration, and expiry paths so review decisions can drive the next workflow step."
+              },
+              {
+                "title": "Workflow",
+                "body": "Select topic → generate content and assets → send WhatsApp preview → approve, reject, or regenerate → publish approved content; expire stale requests."
+              },
+              {
+                "title": "My contribution",
+                "body": "Designed and am building the end-to-end workflow using n8n, AWS AI services, APIs, webhooks, and Meta WhatsApp/Instagram integrations."
+              },
+              {
+                "title": "Evidence & next measurement",
+                "body": "In development. These are proposed evaluation metrics, not achieved results or claims about an existing audience."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Approval-to-publication time",
+                "definition": "Median elapsed time between human approval and successful publication; track generation-to-review separately."
+              },
+              {
+                "name": "Publishing reliability",
+                "definition": "Approved posts published correctly ÷ approved posts; count duplicates and failed publishes separately."
+              },
+              {
+                "name": "Review effort & content quality",
+                "definition": "Manual minutes per approved post, first-pass approval rate, and corrections needed for factual errors."
+              }
+            ]
+          }
+        },
+        {
+          "name": "Meet Your Plate",
+          "tag": "Dining decisions · AR menus",
+          "href": "https://www.meetyourplate.com/",
+          "summary": "A platform where restaurant owners build their menus and host AR models — giving diners a richer, more immersive way to experience dishes before they order.",
+          "points": [],
+          "status": "Additional product exploration",
+          "detailLabel": "Read the product case study",
+          "stack": [
+            "AR",
+            "Menu experience"
+          ],
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Product rationale",
+                "body": "Menu descriptions can leave diners uncertain about what a dish will look like. Meet Your Plate explores whether a visual preview can support a more confident choice before ordering."
+              },
+              {
+                "title": "Users & jobs to be done",
+                "body": "Designed for diners comparing dishes and restaurant owners maintaining their menus. Diners want to understand a dish; owners need to present and update menu information."
+              },
+              {
+                "title": "Product & deployment decisions",
+                "body": "Combined a restaurant menu builder with hosted AR dish models. The product question: does the preview reduce uncertainty enough to justify the extra step for diners and content upkeep for owners?"
+              },
+              {
+                "title": "Workflow",
+                "body": "Owner builds a menu and adds models → diner browses dishes → opens an AR preview → decides what to order."
+              },
+              {
+                "title": "My contribution",
+                "body": "Created the menu and AR product presented in the existing portfolio. Customer interviews, restaurant adoption, and commercial impact are not documented here."
+              },
+              {
+                "title": "Evidence & next measurement",
+                "body": "Product exploration. The metrics below require restaurant pilots and instrumentation; this portfolio does not claim reduced order errors."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Order misunderstanding rate",
+                "definition": "Orders corrected because the expected dish differed from the selected dish ÷ orders in a pilot; compare with a baseline."
+              },
+              {
+                "name": "Time to choose a dish",
+                "definition": "Median time from menu open to dish selection, measured alongside satisfaction so faster selection is not assumed to be better."
+              },
+              {
+                "name": "Preview usefulness & owner effort",
+                "definition": "Preview completion rate, diner confidence feedback, and time for owners to create or update a menu item."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "experience": {
+      "label": "Experience",
+      "title": "Product thinking. Technical fluency.",
+      "roles": [
+        {
+          "company": "Sanofi",
+          "title": "AI Strategy & Portfolio Intern",
+          "period": "Sep 2025 – Sep 2026",
+          "location": "Paris, France",
+          "bullets": [
+            "Led discovery across 20+ teams and end-to-end deployment of an internal AI product.",
+            "Built with GitHub APIs, internal commercial datasets, and Snowflake Cortex to support component reuse.",
+            "Translated stakeholder workflows into capabilities, validated outputs, and supported adoption."
+          ]
+        },
+        {
+          "company": "KidsPass.Asia",
+          "title": "Product Analyst Intern",
+          "period": "Nov 2024 – Jan 2025",
+          "location": "Singapore",
+          "bullets": [
+            "Spoke with 50+ partners and customers; redesigned onboarding with the founding team, achieving around 40% onboarding conversion.",
+            "Tracked KPIs in Excel and Power BI and shared partner trends and competitor insights with founders.",
+            "Turned feedback and onboarding findings into product priorities."
+          ]
+        },
+        {
+          "company": "Fiserv",
+          "title": "Technology Analyst",
+          "period": "Jun 2022 – Jun 2023",
+          "location": "Chennai, India",
+          "bullets": [
+            "Analyzed authorizations, declines, and settlement status in SQL for service reviews on a Fortune 500 payments platform.",
+            "Investigated recurring failures, tested fixes through UAT and A/B-style comparisons, and supported go-live; reduced issue-resolution time by 80% for a 1,000+ person organization.",
+            "Captured requirements in BRDs, FRDs, and acceptance criteria, reducing scoping time by 40%."
+          ]
+        }
+      ]
+    },
+    "education": {
+      "label": "Education & credentials",
+      "title": "Business school rigor. Engineering grounding.",
+      "schools": [
+        {
+          "school": "ESSEC Business School",
+          "degree": "Master in Management, Grande École",
+          "period": "Sep 2024 – Sep 2026",
+          "detail": "Paris & Singapore · Strategy and Data Analytics · GPA 15.5/20"
+        },
+        {
+          "school": "SRM University AP",
+          "degree": "B.Tech in Computer Science and Engineering",
+          "period": "Jun 2018 – Jun 2022",
+          "detail": "AI & Machine Learning · First Class with Distinction"
+        }
+      ],
+      "certsLabel": "Certifications",
+      "certs": [
+        "Microsoft AI Product Manager Professional Certificate — Coursera",
+        "Six Sigma: White Belt — LinkedIn Learning",
+        "Introduction to Business Analysis — LinkedIn Learning (IIBA®-endorsed)"
+      ]
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "Let’s build something useful.",
+      "sub": "Open to product, AI deployment strategy, and enterprise solution roles focused on user workflows, engineering collaboration, and adoption.",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "resume": "Resume"
+    },
+    "footer": {
+      "rights": "Built with intention in Paris."
+    },
+    "capabilities": {
+      "label": "How I work",
+      "title": "From user needs to everyday adoption.",
+      "steps": [
+        {
+          "title": "01 / Understand",
+          "body": "Talk to users and map the task, friction, and constraints before choosing a solution."
+        },
+        {
+          "title": "02 / Prioritize",
+          "body": "Define the problem, scope the product, and agree on success measures."
+        },
+        {
+          "title": "03 / Coordinate",
+          "body": "Work with engineering on requirements and integrations; prototype with Cursor when useful."
+        },
+        {
+          "title": "04 / Embed",
+          "body": "Validate with users, deploy into the workflow, and evaluate adoption and outcomes."
+        }
+      ],
+      "skillsLabel": "Tools for analysis, prototyping & deployment",
+      "skills": [
+        "Python",
+        "SQL",
+        "APIs & webhooks",
+        "n8n",
+        "AWS",
+        "Snowflake",
+        "GitHub",
+        "Power BI",
+        "Excel",
+        "Google Analytics",
+        "Jira"
+      ]
+    },
+    "caseStudy": {
+      "metricsLabel": "Proposed success metrics",
+      "metricsNote": "Evaluation framework; these metrics are not reported results."
+    }
   },
-  nav: {
-    work: "Work",
-    projects: "Projects",
-    about: "About",
-    experience: "Experience",
-    contact: "Contact",
-    language: "Language",
+  "fr": {
+    "meta": {
+      "title": "Atheeq Syed — Produit & stratégie de déploiement IA",
+      "description": "Je comprends les processus utilisateurs, définis les priorités produit et coordonne le déploiement avec les équipes d’ingénierie. Je prototype et code avec des outils comme Cursor lorsque cela fait avancer une idée."
+    },
+    "nav": {
+      "work": "Travail",
+      "projects": "Projets",
+      "about": "À propos",
+      "experience": "Parcours",
+      "contact": "Contact",
+      "language": "Langue"
+    },
+    "hero": {
+      "role": "Produit · Déploiement IA · Processus en entreprise",
+      "headline": "J’aide les équipes à transformer les besoins utilisateurs en solutions adaptées à leurs processus.",
+      "sub": "Je comprends les processus utilisateurs, définis les priorités produit et coordonne le déploiement avec les équipes d’ingénierie. Je prototype et code avec des outils comme Cursor lorsque cela fait avancer une idée.",
+      "email": "Échangeons",
+      "resume": "Télécharger le CV",
+      "basedIn": "Paris, France",
+      "selectedWork": "Découvrir mon travail"
+    },
+    "about": {
+      "label": "À propos",
+      "title": "Comprendre le processus est le point de départ du produit.",
+      "p1": "Mon parcours relie l’informatique à SRM University AP, les paiements chez Fiserv et un Master in Management à l’ESSEC, entre Singapour et Paris. J’aime transformer un problème métier en solution concrète.",
+      "p2": "Chez Sanofi, j’ai travaillé avec les équipes produit, ingénierie et métier pour transformer des difficultés récurrentes de développement en produit IA interne. Chez KidSpass.Asia, les échanges avec les partenaires et clients ont guidé la refonte de l’onboarding avec les fondateurs.",
+      "p3": "Je m’intéresse au produit et à la stratégie de déploiement : comprendre le travail des utilisateurs, définir la solution et accompagner son adoption. Je peux prototyper et coder avec Cursor, tout en coordonnant avec l’ingénierie. Mes projets explorent l’accès vocal aux services, les opérations de contenu et l’aide visuelle à la décision."
+    },
+    "work": {
+      "label": "Travail sélectionné",
+      "title": "Comprendre le processus est le point de départ du produit.",
+      "items": [
+        {
+          "name": "Sanofi — produit IA interne",
+          "tag": "Découverte → Intégration → Déploiement",
+          "status": "Déployé en interne",
+          "summary": "Les équipes reconstruisaient des composants déjà existants. J’ai mené un produit IA interne de la découverte au déploiement pour faciliter la recherche et la réutilisation du travail existant.",
+          "points": [],
+          "stack": [
+            "GitHub APIs",
+            "Snowflake Cortex",
+            "Internal datasets"
+          ],
+          "detailLabel": "Lire l’étude de cas produit",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Logique produit",
+                "body": "Les développements répétés révélaient un problème de processus : découvrir les composants réutilisables avant de mobiliser du temps et du budget. Les échanges avec plus de 20 équipes ont guidé le produit interne."
+              },
+              {
+                "title": "Utilisateurs & besoins",
+                "body": "Équipes internes produit, ingénierie et métier évaluant des initiatives IA : trouver des composants pertinents, évaluer leur réutilisation et cadrer une solution."
+              },
+              {
+                "title": "Décisions produit & déploiement",
+                "body": "Intégration des APIs GitHub, de données commerciales internes et de Snowflake Cortex. Traduction des besoins en fonctionnalités, validation avec les équipes, itérations et accompagnement de l’adoption."
+              },
+              {
+                "title": "Parcours",
+                "body": "Initiative → recherche de composants → évaluation avec les équipes → réutilisation → validation et adoption."
+              },
+              {
+                "title": "Ma contribution",
+                "body": "Pilotage de la découverte et du déploiement complet, coordination des équipes produit, ingénierie et métier, et construction de la solution."
+              },
+              {
+                "title": "Éléments établis & mesure à venir",
+                "body": "Déployé en interne ; découverte auprès de plus de 20 équipes. Aucun gain chiffré en temps ou en investissement n’est revendiqué."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Taux de réutilisation réussie",
+                "definition": "Initiatives réutilisant un composant adapté ÷ initiatives évaluées."
+              },
+              {
+                "name": "Temps pour trouver un composant utile",
+                "definition": "Temps médian entre une demande et une correspondance validée par les équipes."
+              },
+              {
+                "name": "Adoption & pertinence",
+                "definition": "Usage répété par les équipes cibles et proportion de recommandations jugées pertinentes."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "projects": {
+      "label": "Études de cas produit",
+      "title": "Les utilisateurs, le problème et les décisions produit.",
+      "intro": "À qui s’adresse chaque produit, quel processus change, ma contribution et comment évaluer son succès.",
+      "visit": "Voir le site",
+      "items": [
+        {
+          "name": "NidahAI",
+          "tag": "Accès au service · IA vocale",
+          "status": "Agent vocal en production",
+          "summary": "Un agent vocal IA pour les appels entrants, capable de comprendre l’intention, gérer des conversations en plusieurs étapes et déclencher des actions via APIs et webhooks.",
+          "points": [],
+          "href": "https://nidahai.com/",
+          "linkLabel": "Découvrir NidahAI",
+          "stack": [
+            "Voice AI",
+            "Telephony",
+            "APIs",
+            "Webhooks"
+          ],
+          "detailLabel": "Lire l’étude de cas produit",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Logique produit",
+                "body": "Une conversation vocale doit permettre d’accéder à un service et d’accomplir une tâche. NidahAI relie l’échange à un processus opérationnel avec un accès à une aide humaine."
+              },
+              {
+                "title": "Utilisateurs & besoins",
+                "body": "Conçu pour les appelants recherchant des informations ou une aide pour leurs rendez-vous, et les équipes opérationnelles des cliniques. Résoudre la demande sans répéter les informations."
+              },
+              {
+                "title": "Décisions produit & déploiement",
+                "body": "Logique conversationnelle reliée à la téléphonie, à la planification, aux APIs et aux webhooks, avec transfert humain. Évaluer la précision des actions et l’accès au service."
+              },
+              {
+                "title": "Parcours",
+                "body": "Appel → intention → information ou rendez-vous → confirmation → transfert humain si nécessaire."
+              },
+              {
+                "title": "Ma contribution",
+                "body": "Conception, construction et lancement indépendants : prompting, logique conversationnelle, intégrations, planification et transfert humain."
+              },
+              {
+                "title": "Éléments établis & mesure à venir",
+                "body": "Agent vocal en production selon le CV. Les KPIs sont proposés ; aucun volume, taux de précision ou gain de temps n’est annoncé."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Taux d’erreur des demandes",
+                "definition": "Actions incorrectes ou incomplètes ÷ actions tentées ; distinguer les erreurs d’intention et d’exécution."
+              },
+              {
+                "name": "Temps d’accès au service",
+                "definition": "Médiane et 90e percentile du temps entre le début de l’appel et une réponse utile ou le contact avec la bonne personne."
+              },
+              {
+                "name": "Résolution & qualité du transfert",
+                "definition": "Demandes correctement résolues sans nouveau contact ; connexions humaines réussies ÷ transferts tentés."
+              }
+            ]
+          }
+        },
+        {
+          "name": "Business Explainer",
+          "tag": "Opérations de contenu · Validation humaine",
+          "status": "En développement",
+          "summary": "Un processus IA qui sélectionne des sujets pédagogiques sur le business, génère du contenu Instagram et ses visuels, puis envoie un aperçu sur WhatsApp pour validation humaine.",
+          "points": [],
+          "stack": [
+            "n8n",
+            "AWS AI",
+            "Meta APIs",
+            "WhatsApp",
+            "Webhooks"
+          ],
+          "detailLabel": "Lire l’étude de cas produit",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Logique produit",
+                "body": "La production de contenu inclut le choix du sujet, la vérification, les visuels et l’approbation. Le produit relie ces étapes en conservant un contrôle éditorial humain."
+              },
+              {
+                "title": "Utilisateurs & besoins",
+                "body": "Conçu pour le créateur ou opérateur de contenus pédagogiques business, destinés aux apprenants. Réviser et publier sans déplacer manuellement les éléments entre outils."
+              },
+              {
+                "title": "Décisions produit & déploiement",
+                "body": "WhatsApp comme interface de revue et approbation humaine avant publication. Parcours explicites pour approbation, rejet, régénération et expiration."
+              },
+              {
+                "title": "Parcours",
+                "body": "Sujet → contenu et visuels → aperçu WhatsApp → approbation, rejet ou régénération → publication ; expiration des demandes anciennes."
+              },
+              {
+                "title": "Ma contribution",
+                "body": "Conception et construction en cours avec n8n, AWS AI, APIs, webhooks et intégrations Meta WhatsApp/Instagram."
+              },
+              {
+                "title": "Éléments établis & mesure à venir",
+                "body": "En développement. Mesures proposées, sans résultat atteint ni audience revendiquée."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Délai approbation-publication",
+                "definition": "Temps médian entre l’approbation humaine et la publication réussie ; mesurer séparément la préparation de l’aperçu."
+              },
+              {
+                "name": "Fiabilité de publication",
+                "definition": "Publications approuvées et correctement publiées ÷ publications approuvées ; suivre les doublons et les échecs."
+              },
+              {
+                "name": "Effort de revue & qualité",
+                "definition": "Minutes manuelles par publication approuvée, taux d’approbation initiale et corrections factuelles nécessaires."
+              }
+            ]
+          }
+        },
+        {
+          "name": "Meet Your Plate",
+          "tag": "Choix des plats · Menus AR",
+          "href": "https://www.meetyourplate.com/",
+          "summary": "Une plateforme où les restaurateurs construisent leur menu et hébergent des modèles AR — pour une découverte des plats plus riche avant la commande.",
+          "points": [],
+          "status": "Exploration produit complémentaire",
+          "stack": [
+            "AR",
+            "Menus"
+          ],
+          "detailLabel": "Lire l’étude de cas produit",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "Logique produit",
+                "body": "Une description de menu peut laisser planer un doute sur l’apparence d’un plat. Meet Your Plate explore l’utilité d’un aperçu visuel avant de commander."
+              },
+              {
+                "title": "Utilisateurs & besoins",
+                "body": "Conçu pour les clients comparant les plats et les restaurateurs mettant à jour leurs menus : comprendre un plat et présenter des informations à jour."
+              },
+              {
+                "title": "Décisions produit & déploiement",
+                "body": "Éditeur de menus avec hébergement de modèles AR. Question produit : l’aperçu réduit-il assez l’incertitude pour justifier l’étape supplémentaire et l’entretien du contenu ?"
+              },
+              {
+                "title": "Parcours",
+                "body": "Menu et modèles ajoutés par le restaurateur → consultation → aperçu AR → choix du plat."
+              },
+              {
+                "title": "Ma contribution",
+                "body": "Création du produit menu et AR présenté dans le portfolio existant. Entretiens clients, adoption et impact commercial non documentés ici."
+              },
+              {
+                "title": "Éléments établis & mesure à venir",
+                "body": "Exploration produit. KPIs à évaluer en pilote ; aucune baisse d’erreurs de commande n’est revendiquée."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "Taux de malentendu sur la commande",
+                "definition": "Commandes corrigées pour écart entre attente et plat sélectionné ÷ commandes du pilote, avec une référence initiale."
+              },
+              {
+                "name": "Temps de choix d’un plat",
+                "definition": "Temps médian de l’ouverture du menu au choix, avec la satisfaction pour éviter d’assimiler rapidité et qualité."
+              },
+              {
+                "name": "Utilité de l’aperçu & effort restaurateur",
+                "definition": "Taux de consultation complète, confiance déclarée des clients et temps de création ou modification d’un plat."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "experience": {
+      "label": "Parcours",
+      "title": "Approche produit. Aisance technique.",
+      "roles": [
+        {
+          "company": "Sanofi",
+          "title": "Stagiaire Stratégie IA & Portefeuille",
+          "period": "Sep 2025 – Sep 2026",
+          "location": "Paris, France",
+          "bullets": [
+            "Découverte auprès de plus de 20 équipes et déploiement complet d’un produit IA interne.",
+            "Intégration des APIs GitHub, de données commerciales internes et de Snowflake Cortex pour favoriser la réutilisation.",
+            "Traduction des besoins métier en fonctionnalités, validation et accompagnement de l’adoption."
+          ]
+        },
+        {
+          "company": "KidsPass.Asia",
+          "title": "Stagiaire Product Analyst",
+          "period": "Nov 2024 – Jan 2025",
+          "location": "Singapour",
+          "bullets": [
+            "Échanges avec plus de 50 partenaires et clients ; refonte de l’onboarding avec les fondateurs, atteignant environ 40 % de conversion.",
+            "Suivi des KPIs dans Excel et Power BI, partage des tendances partenaires et de la veille concurrentielle.",
+            "Transformation des retours clients en priorités produit."
+          ]
+        },
+        {
+          "company": "Fiserv",
+          "title": "Technology Analyst",
+          "period": "Jun 2022 – Jun 2023",
+          "location": "Chennai, Inde",
+          "bullets": [
+            "Analyse SQL des autorisations, refus et règlements pour une plateforme de paiements Fortune 500.",
+            "Investigation des incidents, tests UAT et comparaisons de type A/B, puis accompagnement de la mise en production : réduction de 80 % du temps de résolution pour une organisation de plus de 1 000 personnes.",
+            "Formalisation des besoins en BRDs, FRDs et critères d’acceptation : réduction de 40 % du temps de cadrage."
+          ]
+        }
+      ]
+    },
+    "education": {
+      "label": "Formation & certifications",
+      "title": "Rigueur business school. Socle ingénieur.",
+      "schools": [
+        {
+          "school": "ESSEC Business School",
+          "degree": "Master in Management, Grande École",
+          "period": "Sep 2024 – Sep 2026",
+          "detail": "Paris et Singapour · Stratégie et Data Analytics · Moyenne 15,5/20"
+        },
+        {
+          "school": "SRM University AP",
+          "degree": "B.Tech en Computer Science and Engineering",
+          "period": "Jun 2018 – Jun 2022",
+          "detail": "IA et Machine Learning · First Class with Distinction"
+        }
+      ],
+      "certsLabel": "Certifications",
+      "certs": [
+        "Microsoft AI Product Manager Professional Certificate — Coursera",
+        "Six Sigma: White Belt — LinkedIn Learning",
+        "Introduction to Business Analysis — LinkedIn Learning (IIBA®)"
+      ]
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "Construisons quelque chose d’utile.",
+      "sub": "Ouvert aux rôles produit, stratégie de déploiement IA et solutions en entreprise : besoins utilisateurs, collaboration avec l’ingénierie et adoption.",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "resume": "CV"
+    },
+    "footer": {
+      "rights": "Conçu avec intention à Paris."
+    },
+    "capabilities": {
+      "label": "Ma méthode",
+      "title": "Des besoins utilisateurs à l’adoption quotidienne.",
+      "steps": [
+        {
+          "title": "01 / Comprendre",
+          "body": "Échanger avec les utilisateurs et comprendre la tâche, les difficultés et les contraintes."
+        },
+        {
+          "title": "02 / Prioriser",
+          "body": "Définir le problème, cadrer le produit et convenir des mesures de succès."
+        },
+        {
+          "title": "03 / Coordonner",
+          "body": "Travailler avec l’ingénierie sur les besoins et intégrations ; prototyper avec Cursor si utile."
+        },
+        {
+          "title": "04 / Intégrer",
+          "body": "Valider avec les utilisateurs, déployer dans leur processus et évaluer adoption et résultats."
+        }
+      ],
+      "skillsLabel": "Outils d’analyse, de prototypage et de déploiement",
+      "skills": [
+        "Python",
+        "SQL",
+        "APIs & webhooks",
+        "n8n",
+        "AWS",
+        "Snowflake",
+        "GitHub",
+        "Power BI",
+        "Excel",
+        "Google Analytics",
+        "Jira"
+      ]
+    },
+    "caseStudy": {
+      "metricsLabel": "Indicateurs de succès proposés",
+      "metricsNote": "Cadre d’évaluation ; ces indicateurs ne sont pas des résultats mesurés."
+    }
   },
-  hero: {
-    role: "AI Strategy · Product · AI Vibe Coder",
-    headline: "From strategy decks to working PoCs.",
-    sub: "I shape AI portfolio decisions, craft the narrative for leadership, then build GenAI prototypes teams actually use — currently at Sanofi, after ESSEC and a CS foundation.",
-    email: "Email me",
-    resume: "Download resume",
-    basedIn: "Paris, France",
-  },
-  about: {
-    label: "About",
-    title: "Strategy when it matters. Code when it ships.",
-    p1: "I’m Atheeq Syed. I studied Computer Science at SRM University, then spent a year as a Technology Analyst at Fiserv — mostly building systems, with real business analysis work alongside.",
-    p2: "I then pursued a two-year Master’s in Management at ESSEC. Year one in Singapore: founding-team business development and product. Year two in France: AI strategy and portfolio at Sanofi — market analysis, executive dashboards, and GenAI PoCs.",
-    p3: "I’m an AI vibe coder: comfortable building strategy decks for leadership and spinning up end-to-end PoCs with tools like Cursor. Personal products include NidahAI and Meet Your Plate. Looking for entry-level roles in AI strategy, product management, and business analysis.",
-  },
-  work: {
-    label: "Selected work",
-    title: "Where strategy becomes something teams can run with.",
-    items: [
-      {
-        name: "Sanofi — GenAI PoC & AI portfolio",
-        tag: "AI Strategy · Portfolio · PoC",
-        summary:
-          "Built a GenAI-powered proof of concept for internal workflows so teams can focus on strategic goals — now used by 100+ teams. Also delivered a Power BI dashboard for the Communications team tracking reach across 80,000+ customers in 50+ countries.",
-        points: [
-          "Market and capability analysis across a large AI product portfolio",
-          "Strategy framing for leadership, then an end-to-end GenAI PoC (Cursor + Snowflake Cortex)",
-          "Executive-facing adoption and communications metrics",
-        ],
-      },
-    ],
-  },
-  projects: {
-    label: "Personal projects",
-    title: "AI vibe coder — products I shipped myself.",
-    intro:
-      "I don’t stop at the slide deck. I design the story, then build living products — from voice agents to AR experiences.",
-    visit: "Visit site",
-    items: [
-      {
-        name: "NidahAI",
-        tag: "Voice AI · Healthcare",
-        href: "https://nidahai.com/",
-        summary:
-          "A Voice AI agent for healthcare operations — booking, rescheduling, and cancelling appointments, answering information requests, and sending confirmation messages to the user’s WhatsApp.",
-        points: [
-          "Conversational voice flows for clinic operations",
-          "Appointment lifecycle: book, reschedule, cancel",
-          "WhatsApp confirmation messaging",
-        ],
-      },
-      {
-        name: "Meet Your Plate",
-        tag: "Product · AR Experience",
-        href: "https://www.meetyourplate.com/",
-        summary:
-          "A platform where restaurant owners build their menus and host AR models — giving diners a richer, more immersive way to experience dishes before they order.",
-        points: [
-          "Menu builder for restaurant owners",
-          "AR model hosting for dish previews",
-          "Enriched dining discovery experience",
-        ],
-      },
-    ],
-  },
-  experience: {
-    label: "Experience",
-    title: "A path across engineering, product, and AI strategy.",
-    roles: [
-      {
-        company: "Sanofi",
-        title: "AI Strategy & Portfolio Intern",
-        period: "Sep 2025 – Present",
-        location: "Paris, France",
-        bullets: [
-          "Market analysis and GenAI PoC for internal workflows — adopted by 100+ teams",
-          "Power BI dashboards for Communications reach across 80,000+ customers in 50+ countries",
-          "Partnered with cross-functional teams to evaluate AI use cases and reduce duplicate effort",
-        ],
-      },
-      {
-        company: "KidsPass.Asia",
-        title: "Product Analyst Intern (Founding Team)",
-        period: "Nov 2024 – Jan 2025",
-        location: "Singapore",
-        bullets: [
-          "Customer discovery with 50+ B2C customers; contributed to ~50% partner onboarding",
-          "Market research, competitor mapping, and product feedback loops",
-        ],
-      },
-      {
-        company: "Fiserv",
-        title: "Technology Analyst",
-        period: "Jun 2022 – Jun 2023",
-        location: "Chennai, India",
-        bullets: [
-          "Built token-based auth adopted by a 1,000+ member support organization",
-          "Translated stakeholder needs into roadmaps and requirements; cut scoping time ~40%",
-        ],
-      },
-    ],
-  },
-  education: {
-    label: "Education & credentials",
-    title: "Business school rigor. Engineering grounding.",
-    schools: [
-      {
-        school: "ESSEC Business School",
-        degree: "Master in Management, Grande École",
-        period: "Sep 2024 – Present",
-        detail: "Singapore campus, then Paris · FT-ranked Grande École",
-      },
-      {
-        school: "SRM University AP",
-        degree: "B.Tech in Computer Science and Engineering",
-        period: "Jun 2018 – Jun 2022",
-        detail: "India",
-      },
-    ],
-    certsLabel: "Certifications",
-    certs: [
-      "Microsoft AI Product Manager Professional Certificate — Coursera",
-      "Six Sigma: White Belt — LinkedIn Learning",
-      "Introduction to Business Analysis — LinkedIn Learning (IIBA®-endorsed)",
-    ],
-  },
-  contact: {
-    label: "Contact",
-    title: "Let’s talk AI strategy or product.",
-    sub: "Open to entry-level roles in AI strategy, product management, and business analysis.",
-    email: "Email",
-    linkedin: "LinkedIn",
-    resume: "Resume",
-  },
-  footer: {
-    rights: "Built with intention in Paris.",
-  },
+  "ar": {
+    "meta": {
+      "title": "عتيق سيد — المنتج واستراتيجية نشر الذكاء الاصطناعي",
+      "description": "أفهم سير عمل المستخدم وأحدد أولويات المنتج وأنسق مع فرق الهندسة لنشر حلول مفيدة. أبني النماذج وأكتب الكود بأدوات مثل Cursor عندما يساعد ذلك على تطوير الفكرة."
+    },
+    "nav": {
+      "work": "العمل",
+      "projects": "المشاريع",
+      "about": "نبذة",
+      "experience": "الخبرة",
+      "contact": "تواصل",
+      "language": "اللغة"
+    },
+    "hero": {
+      "role": "منتج · استراتيجية نشر الذكاء الاصطناعي · سير عمل المؤسسات",
+      "headline": "أساعد الفرق على تحويل احتياجات المستخدمين إلى حلول تناسب سير عملهم.",
+      "sub": "أفهم سير عمل المستخدم وأحدد أولويات المنتج وأنسق مع فرق الهندسة لنشر حلول مفيدة. أبني النماذج وأكتب الكود بأدوات مثل Cursor عندما يساعد ذلك على تطوير الفكرة.",
+      "email": "راسلني",
+      "resume": "تحميل السيرة",
+      "basedIn": "باريس، فرنسا",
+      "selectedWork": "استكشف أعمالي"
+    },
+    "about": {
+      "label": "نبذة",
+      "title": "فهم سير العمل هو بداية المنتج.",
+      "p1": "يجمع مساري بين علوم الحاسوب في SRM University AP وتقنيات الدفع في Fiserv وماجستير الإدارة في ESSEC بين سنغافورة وباريس. أستمتع بتحويل مشكلات الأعمال إلى حلول قابلة للبناء.",
+      "p2": "في سانوفي، عملت مع فرق المنتج والهندسة والأعمال لتحويل عقبات التطوير المتكررة إلى منتج ذكاء اصطناعي داخلي. وفي KidSpass.Asia، ساهمت محادثات الشركاء والعملاء في إعادة تصميم تجربة الانضمام مع الفريق المؤسس.",
+      "p3": "اهتماماتي هي المنتج واستراتيجية النشر: فهم عمل الناس وتحديد احتياجات الحل ودعم تبنيه. أستطيع بناء نماذج وكتابة الكود باستخدام Cursor مع التنسيق مع فرق الهندسة. تستكشف مشاريعي الوصول الصوتي للخدمات وعمليات المحتوى ودعم القرار بصرياً."
+    },
+    "work": {
+      "label": "أعمال مختارة",
+      "title": "فهم سير العمل هو بداية المنتج.",
+      "items": [
+        {
+          "name": "سانوفي — منتج ذكاء اصطناعي داخلي",
+          "tag": "اكتشاف ← تكامل ← نشر",
+          "status": "منشور داخلياً",
+          "summary": "كانت الفرق تعيد بناء مكونات موجودة. قدت منتجاً داخلياً من الاكتشاف إلى النشر لمساعدة الفرق على العثور على العمل القائم وإعادة استخدامه.",
+          "points": [],
+          "stack": [
+            "GitHub APIs",
+            "Snowflake Cortex",
+            "Internal datasets"
+          ],
+          "detailLabel": "اقرأ دراسة حالة المنتج",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "منطق المنتج",
+                "body": "تكرار التطوير كان مشكلة في سير العمل: العثور على المكونات القابلة لإعادة الاستخدام قبل تخصيص الوقت والميزانية. وجّهت جلسات مع أكثر من 20 فريقاً المنتج الداخلي."
+              },
+              {
+                "title": "المستخدمون واحتياجاتهم",
+                "body": "فرق المنتج والهندسة والأعمال الداخلية التي تقيّم مبادرات الذكاء الاصطناعي: العثور على مكونات مناسبة وتقييم إعادة استخدامها وتحديد نطاق الحل."
+              },
+              {
+                "title": "قرارات المنتج والنشر",
+                "body": "ربط GitHub APIs والبيانات التجارية الداخلية وSnowflake Cortex. تحويل الاحتياجات إلى قدرات والتحقق من النتائج مع الفرق وتحسينها ودعم الاستخدام."
+              },
+              {
+                "title": "سير العمل",
+                "body": "مبادرة ← البحث عن مكونات ← تقييم الملاءمة ← إعادة الاستخدام ← التحقق والتبني."
+              },
+              {
+                "title": "مساهمتي",
+                "body": "قيادة الاكتشاف والنشر الكامل والتنسيق مع فرق المنتج والهندسة والأعمال وبناء الحل."
+              },
+              {
+                "title": "ما ثبت وما يحتاج القياس",
+                "body": "منشور داخلياً؛ شمل الاكتشاف أكثر من 20 فريقاً. لا أدّعي وفورات رقمية في الوقت أو الاستثمار."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "معدل إعادة الاستخدام الناجح",
+                "definition": "مبادرات أعادت استخدام مكون مناسب ÷ المبادرات المقيمة."
+              },
+              {
+                "name": "وقت العثور على مكون مفيد",
+                "definition": "الوقت الوسيط من طلب البحث إلى تطابق توافق عليه الفرق."
+              },
+              {
+                "name": "التبني والملاءمة",
+                "definition": "الاستخدام المتكرر من الفرق المستهدفة ونسبة التوصيات التي تُعد مناسبة."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "projects": {
+      "label": "دراسات حالة للمنتجات",
+      "title": "المستخدم والمشكلة وقرارات المنتج.",
+      "intro": "لمن صُمم كل منتج وما الذي يغيره ودوري وكيف أقيم نجاحه.",
+      "visit": "زيارة الموقع",
+      "items": [
+        {
+          "name": "NidahAI",
+          "tag": "الوصول للخدمة · ذكاء صوتي",
+          "status": "وكيل صوتي في الإنتاج",
+          "summary": "وكيل صوتي للمحادثات الواردة يفهم نية المستخدم ويدير خطوات متعددة وينفذ إجراءات عبر APIs وwebhooks.",
+          "points": [],
+          "href": "https://nidahai.com/",
+          "linkLabel": "استكشف NidahAI",
+          "stack": [
+            "Voice AI",
+            "Telephony",
+            "APIs",
+            "Webhooks"
+          ],
+          "detailLabel": "اقرأ دراسة حالة المنتج",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "منطق المنتج",
+                "body": "ينبغي أن تساعد المحادثة الصوتية الشخص في الوصول إلى الخدمة وإنجاز المهمة. يربط NidahAI التفاعل بسير عمل تشغيلي مع إمكانية طلب مساعدة بشرية."
+              },
+              {
+                "title": "المستخدمون واحتياجاتهم",
+                "body": "مصمم للمتصلين الذين يحتاجون معلومات أو مساعدة في المواعيد ولفرق تشغيل العيادات. حل الطلب دون تكرار شرح المعلومات."
+              },
+              {
+                "title": "قرارات المنتج والنشر",
+                "body": "ربط منطق المحادثة بالهاتف والجدولة وAPIs وwebhooks مع التحويل إلى موظف. تقييم دقة الإجراءات وسرعة الوصول إلى الخدمة."
+              },
+              {
+                "title": "سير العمل",
+                "body": "مكالمة ← فهم النية ← معلومات أو موعد ← تأكيد ← تحويل بشري عند الحاجة."
+              },
+              {
+                "title": "مساهمتي",
+                "body": "تصميم وبناء وإطلاق مستقل يشمل التوجيه ومنطق المحادثة والتكاملات والجدولة والتحويل البشري."
+              },
+              {
+                "title": "ما ثبت وما يحتاج القياس",
+                "body": "وكيل صوتي في الإنتاج وفق السيرة. المؤشرات مقترحة؛ لا توجد أرقام لحجم المكالمات أو الدقة أو توفير الوقت."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "معدل أخطاء الطلبات",
+                "definition": "إجراءات خاطئة أو غير مكتملة ÷ الإجراءات المجربة، مع فصل أخطاء فهم النية عن التنفيذ."
+              },
+              {
+                "name": "وقت الوصول إلى الخدمة",
+                "definition": "الوسيط والمئين التسعون من بداية المكالمة إلى استجابة مفيدة أو اتصال بالموظف المناسب."
+              },
+              {
+                "name": "الحل وجودة التحويل",
+                "definition": "طلبات حُلّت بصورة صحيحة دون اتصال متكرر؛ اتصالات بشرية ناجحة ÷ محاولات التحويل."
+              }
+            ]
+          }
+        },
+        {
+          "name": "Business Explainer",
+          "tag": "عمليات المحتوى · موافقة بشرية",
+          "status": "قيد التطوير",
+          "summary": "نظام يختار موضوعات تعليمية عن الأعمال ويولد محتوى Instagram وتصاميم المنشورات ويرسل معاينات إلى WhatsApp للموافقة البشرية.",
+          "points": [],
+          "stack": [
+            "n8n",
+            "AWS AI",
+            "Meta APIs",
+            "WhatsApp",
+            "Webhooks"
+          ],
+          "detailLabel": "اقرأ دراسة حالة المنتج",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "منطق المنتج",
+                "body": "إنتاج المحتوى يشمل اختيار الموضوع والتحقق والمراجعة والموافقة. يربط المنتج هذه الخطوات مع إبقاء القرار التحريري بيد الإنسان."
+              },
+              {
+                "title": "المستخدمون واحتياجاتهم",
+                "body": "مصمم لصانع أو مشغل المحتوى التعليمي عن الأعمال، والمتعلمون هم الجمهور المقصود. مراجعة المحتوى ونشره دون نقل يدوي بين أدوات منفصلة."
+              },
+              {
+                "title": "قرارات المنتج والنشر",
+                "body": "WhatsApp واجهة للمراجعة مع موافقة بشرية قبل النشر ومسارات واضحة للموافقة والرفض وإعادة التوليد وانتهاء الصلاحية."
+              },
+              {
+                "title": "سير العمل",
+                "body": "موضوع ← محتوى وتصاميم ← معاينة WhatsApp ← موافقة أو رفض أو إعادة توليد ← نشر؛ انتهاء صلاحية الطلبات القديمة."
+              },
+              {
+                "title": "مساهمتي",
+                "body": "تصميم وبناء جارٍ باستخدام n8n وAWS AI وAPIs وwebhooks وتكاملات Meta WhatsApp/Instagram."
+              },
+              {
+                "title": "ما ثبت وما يحتاج القياس",
+                "body": "قيد التطوير. المؤشرات مقترحة وليست نتائج محققة أو ادعاءً بوجود جمهور."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "زمن الموافقة إلى النشر",
+                "definition": "الوقت الوسيط من الموافقة البشرية إلى النشر الناجح، مع قياس وقت إعداد المعاينة منفصلاً."
+              },
+              {
+                "name": "موثوقية النشر",
+                "definition": "منشورات معتمدة نُشرت بصورة صحيحة ÷ المنشورات المعتمدة، مع متابعة التكرار والفشل."
+              },
+              {
+                "name": "جهد المراجعة وجودة المحتوى",
+                "definition": "الدقائق اليدوية لكل منشور معتمد ونسبة الموافقة من المرة الأولى والتصحيحات الواقعية اللازمة."
+              }
+            ]
+          }
+        },
+        {
+          "name": "Meet Your Plate",
+          "tag": "اختيار الأطباق · قوائم AR",
+          "href": "https://www.meetyourplate.com/",
+          "summary": "منصة يبني فيها أصحاب المطاعم قوائمهم ويستضيفون نماذج واقع معزز لتجربة أغنى قبل الطلب.",
+          "points": [],
+          "status": "استكشاف إضافي للمنتجات",
+          "stack": [
+            "AR",
+            "Menus"
+          ],
+          "detailLabel": "اقرأ دراسة حالة المنتج",
+          "caseStudy": {
+            "sections": [
+              {
+                "title": "منطق المنتج",
+                "body": "قد تترك أوصاف القائمة شكاً حول شكل الطبق. يستكشف Meet Your Plate كيف تساعد المعاينة البصرية على اختيار أكثر ثقة قبل الطلب."
+              },
+              {
+                "title": "المستخدمون واحتياجاتهم",
+                "body": "مصمم للزبائن الذين يقارنون الأطباق وأصحاب المطاعم الذين يحدثون قوائمهم: فهم الطبق وعرض معلومات حديثة."
+              },
+              {
+                "title": "قرارات المنتج والنشر",
+                "body": "محرر قوائم مع نماذج AR مستضافة. هل تقلل المعاينة الغموض بما يكفي لتبرير الخطوة الإضافية للزبون وجهد تحديث المحتوى للمطعم؟"
+              },
+              {
+                "title": "سير العمل",
+                "body": "إضافة القائمة والنماذج ← تصفح الأطباق ← معاينة AR ← اختيار الطلب."
+              },
+              {
+                "title": "مساهمتي",
+                "body": "إنشاء منتج القوائم وAR المعروض في المحفظة القائمة. لا تتوفر هنا بيانات مقابلات العملاء أو التبني أو الأثر التجاري."
+              },
+              {
+                "title": "ما ثبت وما يحتاج القياس",
+                "body": "استكشاف منتج. تحتاج المؤشرات تجربة في مطاعم؛ لا تدّعي المحفظة انخفاض أخطاء الطلبات."
+              }
+            ],
+            "metrics": [
+              {
+                "name": "معدل سوء فهم الطلب",
+                "definition": "طلبات صُححت بسبب اختلاف التوقع عن الطبق المختار ÷ طلبات التجربة، بالمقارنة مع خط أساس."
+              },
+              {
+                "name": "وقت اختيار الطبق",
+                "definition": "الوقت الوسيط من فتح القائمة إلى الاختيار، مع قياس الرضا وعدم افتراض أن الأسرع أفضل."
+              },
+              {
+                "name": "فائدة المعاينة وجهد المطعم",
+                "definition": "نسبة إكمال المعاينة وثقة الزبون ووقت إنشاء أو تحديث عنصر القائمة."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "experience": {
+      "label": "الخبرة",
+      "title": "تفكير المنتج. إلمام تقني.",
+      "roles": [
+        {
+          "company": "Sanofi",
+          "title": "متدرب استراتيجية ومحفظة الذكاء الاصطناعي",
+          "period": "Sep 2025 – Sep 2026",
+          "location": "باريس، فرنسا",
+          "bullets": [
+            "قدت الاكتشاف مع أكثر من 20 فريقاً ونشر منتج ذكاء اصطناعي داخلي من البداية إلى النهاية.",
+            "بنيت الحل باستخدام GitHub APIs والبيانات التجارية الداخلية وSnowflake Cortex لدعم إعادة الاستخدام.",
+            "حوّلت متطلبات الفرق إلى قدرات منتج وتحققت من النتائج ودعمت الاستخدام."
+          ]
+        },
+        {
+          "company": "KidsPass.Asia",
+          "title": "متدرب تحليل المنتجات",
+          "period": "نوفمبر 2024 – يناير 2025",
+          "location": "سنغافورة",
+          "bullets": [
+            "تحدثت مع أكثر من 50 شريكاً وعميلاً وأعدت تصميم الانضمام مع المؤسسين، محققاً نحو 40% تحويل.",
+            "تابعت مؤشرات المنتج في Excel وPower BI وشاركت اتجاهات الشركاء وتحليلات المنافسين.",
+            "حوّلت الملاحظات إلى أولويات للمنتج."
+          ]
+        },
+        {
+          "company": "Fiserv",
+          "title": "محلل تقني",
+          "period": "يونيو 2022 – يونيو 2023",
+          "location": "تشيناي، الهند",
+          "bullets": [
+            "حللت عمليات التفويض والرفض والتسوية باستخدام SQL لمنصة مدفوعات Fortune 500.",
+            "حققت في الأعطال واختبرت الإصلاحات عبر UAT ومقارنات شبيهة بـ A/B ودعمت الإطلاق؛ خفضت وقت حل المشكلات بنسبة 80% لمنظمة تضم أكثر من 1,000 شخص.",
+            "وثقت المتطلبات ومعايير القبول في BRDs وFRDs، وخفضت وقت تحديد النطاق بنسبة 40%."
+          ]
+        }
+      ]
+    },
+    "education": {
+      "label": "التعليم والشهادات",
+      "title": "صرامة مدرسة أعمال. أساس هندسي.",
+      "schools": [
+        {
+          "school": "ESSEC Business School",
+          "degree": "ماجستير الإدارة، Grande École",
+          "period": "Sep 2024 – Sep 2026",
+          "detail": "باريس وسنغافورة · استراتيجية وتحليل بيانات · معدل 15.5/20"
+        },
+        {
+          "school": "SRM University AP",
+          "degree": "بكالوريوس هندسة علوم الحاسوب",
+          "period": "يونيو 2018 – يونيو 2022",
+          "detail": "ذكاء اصطناعي وتعلم آلي · First Class with Distinction"
+        }
+      ],
+      "certsLabel": "الشهادات",
+      "certs": [
+        "Microsoft AI Product Manager Professional Certificate — Coursera",
+        "Six Sigma: White Belt — LinkedIn Learning",
+        "Introduction to Business Analysis — LinkedIn Learning (IIBA®)"
+      ]
+    },
+    "contact": {
+      "label": "تواصل",
+      "title": "لنبنِ شيئاً مفيداً.",
+      "sub": "مهتم بأدوار المنتج واستراتيجية نشر الذكاء الاصطناعي وحلول المؤسسات التي تجمع فهم المستخدم والتعاون مع الهندسة والتبني.",
+      "email": "البريد",
+      "linkedin": "لينكدإن",
+      "resume": "السيرة"
+    },
+    "footer": {
+      "rights": "صُمم بعناية في باريس."
+    },
+    "capabilities": {
+      "label": "طريقة عملي",
+      "title": "من احتياجات المستخدم إلى الاستخدام اليومي.",
+      "steps": [
+        {
+          "title": "01 / فهم",
+          "body": "التحدث مع المستخدم وفهم المهمة والعقبات والقيود قبل اختيار الحل."
+        },
+        {
+          "title": "02 / أولويات",
+          "body": "تحديد المشكلة ونطاق المنتج ومقاييس النجاح."
+        },
+        {
+          "title": "03 / تنسيق",
+          "body": "التعاون مع الهندسة على المتطلبات والتكاملات وبناء نماذج بـ Cursor عند الحاجة."
+        },
+        {
+          "title": "04 / تبني",
+          "body": "التحقق مع المستخدم والنشر في سير العمل وتقييم الاستخدام والنتائج."
+        }
+      ],
+      "skillsLabel": "أدوات التحليل والنماذج والنشر",
+      "skills": [
+        "Python",
+        "SQL",
+        "APIs & webhooks",
+        "n8n",
+        "AWS",
+        "Snowflake",
+        "GitHub",
+        "Power BI",
+        "Excel",
+        "Google Analytics",
+        "Jira"
+      ]
+    },
+    "caseStudy": {
+      "metricsLabel": "مؤشرات نجاح مقترحة",
+      "metricsNote": "إطار تقييم؛ هذه المؤشرات ليست نتائج مقاسة."
+    }
+  }
 };
-
-const fr: Dictionary = {
-  meta: {
-    title: "Atheeq Syed — Stratégie IA & Produit",
-    description:
-      "Stratège IA, product manager et AI vibe coder — des strategy decks aux PoCs qui tournent. Basé à Paris.",
-  },
-  nav: {
-    work: "Travail",
-    projects: "Projets",
-    about: "À propos",
-    experience: "Parcours",
-    contact: "Contact",
-    language: "Langue",
-  },
-  hero: {
-    role: "Stratégie IA · Produit · AI Vibe Coder",
-    headline: "Des strategy decks aux PoCs qui marchent.",
-    sub: "Je façonne les décisions de portefeuille IA, construis le récit pour le leadership, puis prototype des solutions GenAI que les équipes utilisent — actuellement chez Sanofi, après l’ESSEC et une base en informatique.",
-    email: "M’écrire",
-    resume: "Télécharger le CV",
-    basedIn: "Paris, France",
-  },
-  about: {
-    label: "À propos",
-    title: "La stratégie quand il faut. Le code quand ça doit livrer.",
-    p1: "Je m’appelle Atheeq Syed. J’ai étudié l’informatique à SRM University, puis passé un an comme Technology Analyst chez Fiserv — surtout du développement, avec une vraie part d’analyse métier.",
-    p2: "J’ai ensuite suivi un Master in Management de deux ans à l’ESSEC. Première année à Singapour : business development et produit en founding team. Deuxième année en France : stratégie IA et portefeuille chez Sanofi — analyses, dashboards, et PoCs GenAI.",
-    p3: "Je suis un AI vibe coder : à l’aise pour bâtir des strategy decks pour le leadership et pour livrer des PoCs de bout en bout avec des outils comme Cursor. Produits perso : NidahAI et Meet Your Plate. Je vise des rôles junior en stratégie IA, product management et business analysis.",
-  },
-  work: {
-    label: "Travail sélectionné",
-    title: "Là où la stratégie devient actionnable.",
-    items: [
-      {
-        name: "Sanofi — PoC GenAI & portefeuille IA",
-        tag: "Stratégie IA · Portefeuille · PoC",
-        summary:
-          "Conception d’un proof of concept GenAI pour les workflows internes — adopté par plus de 100 équipes. Dashboard Power BI pour l’équipe Communications, mesurant la portée auprès de plus de 80 000 clients dans plus de 50 pays.",
-        points: [
-          "Analyse marché et capacités sur un large portefeuille de produits IA",
-          "Cadre stratégique pour le leadership, puis PoC GenAI bout en bout (Cursor + Snowflake Cortex)",
-          "Métriques d’adoption et de communication pour le leadership",
-        ],
-      },
-    ],
-  },
-  projects: {
-    label: "Projets personnels",
-    title: "AI vibe coder — des produits que j’ai livrés moi-même.",
-    intro:
-      "Je ne m’arrête pas au slide. Je conçois l’histoire, puis je construis des produits vivants — des agents vocaux aux expériences AR.",
-    visit: "Voir le site",
-    items: [
-      {
-        name: "NidahAI",
-        tag: "Voice AI · Santé",
-        href: "https://nidahai.com/",
-        summary:
-          "Un agent vocal IA pour les opérations de santé — prise, report et annulation de rendez-vous, réponses informationnelles, et confirmation WhatsApp à l’utilisateur.",
-        points: [
-          "Parcours conversationnels pour les opérations cliniques",
-          "Cycle de vie du rendez-vous : réserver, reporter, annuler",
-          "Messages de confirmation WhatsApp",
-        ],
-      },
-      {
-        name: "Meet Your Plate",
-        tag: "Produit · Expérience AR",
-        href: "https://www.meetyourplate.com/",
-        summary:
-          "Une plateforme où les restaurateurs construisent leur menu et hébergent des modèles AR — pour une découverte des plats plus riche avant la commande.",
-        points: [
-          "Éditeur de menu pour restaurateurs",
-          "Hébergement de modèles AR pour les plats",
-          "Expérience de découverte enrichie",
-        ],
-      },
-    ],
-  },
-  experience: {
-    label: "Parcours",
-    title: "Un chemin entre ingénierie, produit et stratégie IA.",
-    roles: [
-      {
-        company: "Sanofi",
-        title: "Stagiaire Stratégie IA & Portefeuille",
-        period: "Sep 2025 – Présent",
-        location: "Paris, France",
-        bullets: [
-          "Analyse de marché et PoC GenAI pour workflows internes — 100+ équipes",
-          "Dashboards Power BI pour la portée Communications : 80 000+ clients, 50+ pays",
-          "Collaboration transverse pour évaluer les cas d’usage IA",
-        ],
-      },
-      {
-        company: "KidsPass.Asia",
-        title: "Stagiaire Product Analyst (équipe fondatrice)",
-        period: "Nov 2024 – Jan 2025",
-        location: "Singapour",
-        bullets: [
-          "Customer discovery auprès de 50+ clients B2C ; ~50% d’onboarding partenaires",
-          "Études de marché, cartographie concurrentielle et boucles produit",
-        ],
-      },
-      {
-        company: "Fiserv",
-        title: "Technology Analyst",
-        period: "Jun 2022 – Jun 2023",
-        location: "Chennai, Inde",
-        bullets: [
-          "Système d’authentification adopté par une organisation de support de 1 000+ personnes",
-          "Traduction des besoins stakeholders en roadmaps ; scoping réduit d’environ 40%",
-        ],
-      },
-    ],
-  },
-  education: {
-    label: "Formation & certifications",
-    title: "Rigueur business school. Socle ingénieur.",
-    schools: [
-      {
-        school: "ESSEC Business School",
-        degree: "Master in Management, Grande École",
-        period: "Sep 2024 – Présent",
-        detail: "Campus Singapour, puis Paris · Grande École classée FT",
-      },
-      {
-        school: "SRM University AP",
-        degree: "B.Tech en Computer Science and Engineering",
-        period: "Jun 2018 – Jun 2022",
-        detail: "Inde",
-      },
-    ],
-    certsLabel: "Certifications",
-    certs: [
-      "Microsoft AI Product Manager Professional Certificate — Coursera",
-      "Six Sigma: White Belt — LinkedIn Learning",
-      "Introduction to Business Analysis — LinkedIn Learning (IIBA®)",
-    ],
-  },
-  contact: {
-    label: "Contact",
-    title: "Parlons stratégie IA ou produit.",
-    sub: "Ouvert aux rôles junior en stratégie IA, product management et business analysis.",
-    email: "Email",
-    linkedin: "LinkedIn",
-    resume: "CV",
-  },
-  footer: {
-    rights: "Conçu avec intention à Paris.",
-  },
-};
-
-const ar: Dictionary = {
-  meta: {
-    title: "عتيق سيد — استراتيجية الذكاء الاصطناعي والمنتج",
-    description:
-      "استراتيجي ذكاء اصطناعي ومدير منتجات وAI vibe coder — من عروض الاستراتيجية إلى إثباتات المفهوم. مقيم في باريس.",
-  },
-  nav: {
-    work: "العمل",
-    projects: "المشاريع",
-    about: "نبذة",
-    experience: "الخبرة",
-    contact: "تواصل",
-    language: "اللغة",
-  },
-  hero: {
-    role: "استراتيجية الذكاء الاصطناعي · المنتج · AI Vibe Coder",
-    headline: "من عروض الاستراتيجية إلى إثباتات مفهوم تعمل.",
-    sub: "أصوغ قرارات محفظة الذكاء الاصطناعي، وأبني الرواية للقيادة، ثم أنشئ نماذج GenAI تستخدمها الفرق فعلاً — حالياً في سانوفي، بعد ESSEC وأساس في علوم الحاسوب.",
-    email: "راسلني",
-    resume: "تحميل السيرة",
-    basedIn: "باريس، فرنسا",
-  },
-  about: {
-    label: "نبذة",
-    title: "استراتيجية حين تهم. وكود حين يحين التسليم.",
-    p1: "أنا عتيق سيد. درست علوم الحاسوب في جامعة SRM، ثم عملت سنة كمحلل تقني في Fiserv — غالباً في التطوير مع عمل حقيقي في تحليل الأعمال.",
-    p2: "ثم التحقت بماجستير الإدارة لمدة سنتين في ESSEC. السنة الأولى في سنغافورة: تطوير أعمال ومنتج مع فريق تأسيسي. السنة الثانية في فرنسا: استراتيجية ومحفظة الذكاء الاصطناعي في سانوفي — تحليل سوق ولوحات ولوحات إثبات مفهوم GenAI.",
-    p3: "أنا AI vibe coder: مرتاح لبناء عروض استراتيجية للقيادة وتسليم إثباتات مفهوم متكاملة بأدوات مثل Cursor. منتجاتي الشخصية تشمل NidahAI وMeet Your Plate. أبحث عن أدوار مبتدئة في استراتيجية الذكاء الاصطناعي وإدارة المنتجات وتحليل الأعمال.",
-  },
-  work: {
-    label: "أعمال مختارة",
-    title: "حيث تتحول الاستراتيجية إلى ما يمكن للفرق اعتماده.",
-    items: [
-      {
-        name: "سانوفي — نموذج GenAI ومحفظة الذكاء الاصطناعي",
-        tag: "استراتيجية · محفظة · إثبات مفهوم",
-        summary:
-          "بناء إثبات مفهوم مدعوم بـ GenAI لسير العمل الداخلي — تستخدمه أكثر من 100 فريق. ولوحة Power BI لفريق الاتصالات تعرض الوصول إلى أكثر من 80,000 عميل في أكثر من 50 دولة.",
-        points: [
-          "تحليل السوق والقدرات عبر محفظة واسعة من منتجات الذكاء الاصطناعي",
-          "إطار استراتيجي للقيادة ثم إثبات مفهوم GenAI متكامل (Cursor + Snowflake Cortex)",
-          "مقاييس تبنٍ واتصالات موجّهة للقيادة",
-        ],
-      },
-    ],
-  },
-  projects: {
-    label: "مشاريع شخصية",
-    title: "AI vibe coder — منتجات بنيتها بنفسي.",
-    intro:
-      "لا أتوقف عند العرض التقديمي. أصمّم القصة ثم أبني منتجات حية — من الوكلاء الصوتيين إلى تجارب الواقع المعزز.",
-    visit: "زيارة الموقع",
-    items: [
-      {
-        name: "NidahAI",
-        tag: "صوت ذكي · رعاية صحية",
-        href: "https://nidahai.com/",
-        summary:
-          "وكيل صوتي بالذكاء الاصطناعي لعمليات الرعاية الصحية — حجز المواعيد وإعادة جدولتها وإلغاؤها، وتقديم المعلومات، وإرسال تأكيد عبر واتساب.",
-        points: [
-          "تدفقات محادثة صوتية لعمليات العيادة",
-          "دورة الموعد: حجز، إعادة جدولة، إلغاء",
-          "رسائل تأكيد عبر واتساب",
-        ],
-      },
-      {
-        name: "Meet Your Plate",
-        tag: "منتج · تجربة واقع معزز",
-        href: "https://www.meetyourplate.com/",
-        summary:
-          "منصة يبني فيها أصحاب المطاعم قوائمهم ويستضيفون نماذج واقع معزز لتجربة أغنى قبل الطلب.",
-        points: [
-          "منشئ قوائم للمطاعم",
-          "استضافة نماذج AR للأطباق",
-          "تجربة اكتشاف أغنى للطعام",
-        ],
-      },
-    ],
-  },
-  experience: {
-    label: "الخبرة",
-    title: "مسار عبر الهندسة والمنتج واستراتيجية الذكاء الاصطناعي.",
-    roles: [
-      {
-        company: "Sanofi",
-        title: "متدرب استراتيجية ومحفظة الذكاء الاصطناعي",
-        period: "سبتمبر 2025 – الآن",
-        location: "باريس، فرنسا",
-        bullets: [
-          "تحليل سوق ونموذج GenAI لسير العمل الداخلي — أكثر من 100 فريق",
-          "لوحات Power BI لوصول الاتصالات: 80,000+ عميل في 50+ دولة",
-          "شراكة مع فرق متعددة لتقييم حالات استخدام الذكاء الاصطناعي",
-        ],
-      },
-      {
-        company: "KidsPass.Asia",
-        title: "متدرب محلل منتجات (فريق تأسيسي)",
-        period: "نوفمبر 2024 – يناير 2025",
-        location: "سنغافورة",
-        bullets: [
-          "اكتشاف عملاء مع أكثر من 50 عميلاً؛ مساهمة في ~50% من تسجيل الشركاء",
-          "بحث سوقي ورسم خريطة المنافسين وحلقات تغذية راجعة للمنتج",
-        ],
-      },
-      {
-        company: "Fiserv",
-        title: "محلل تقني",
-        period: "يونيو 2022 – يونيو 2023",
-        location: "تشيناي، الهند",
-        bullets: [
-          "نظام مصادقة اعتمده أكثر من 1,000 عضو في دعم العمليات",
-          "تحويل احتياجات أصحاب المصلحة إلى خرائط طريق؛ تقليل وقت النطاق ~40%",
-        ],
-      },
-    ],
-  },
-  education: {
-    label: "التعليم والشهادات",
-    title: "صرامة مدرسة أعمال. أساس هندسي.",
-    schools: [
-      {
-        school: "ESSEC Business School",
-        degree: "ماجستير الإدارة، Grande École",
-        period: "سبتمبر 2024 – الآن",
-        detail: "حرم سنغافورة ثم باريس",
-      },
-      {
-        school: "SRM University AP",
-        degree: "بكالوريوس هندسة علوم الحاسوب",
-        period: "يونيو 2018 – يونيو 2022",
-        detail: "الهند",
-      },
-    ],
-    certsLabel: "الشهادات",
-    certs: [
-      "Microsoft AI Product Manager Professional Certificate — Coursera",
-      "Six Sigma: White Belt — LinkedIn Learning",
-      "Introduction to Business Analysis — LinkedIn Learning (IIBA®)",
-    ],
-  },
-  contact: {
-    label: "تواصل",
-    title: "لنتحدث عن استراتيجية الذكاء الاصطناعي أو المنتج.",
-    sub: "مفتوح لأدوار مبتدئة في استراتيجية الذكاء الاصطناعي وإدارة المنتجات وتحليل الأعمال.",
-    email: "البريد",
-    linkedin: "لينكدإن",
-    resume: "السيرة",
-  },
-  footer: {
-    rights: "صُمم بعناية في باريس.",
-  },
-};
-
-export const dictionaries: Record<Locale, Dictionary> = { en, fr, ar };
 
 export const localeLabels: Record<Locale, string> = {
   en: "English",

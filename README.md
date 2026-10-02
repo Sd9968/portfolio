@@ -1,6 +1,8 @@
 # Atheeq Syed — Portfolio
 
-Personal portfolio for AI strategy and product management roles.
+Personal portfolio for product, AI deployment strategy, and enterprise workflow adoption roles.
+
+Case studies distinguish documented work from proposed evaluation metrics; KPI definitions are not measured results.
 
 ## Stack
 
