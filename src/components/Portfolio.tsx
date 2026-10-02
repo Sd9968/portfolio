@@ -49,7 +49,7 @@ export function Portfolio() {
             <p className="hero__role anim-fade-up" style={{ animationDelay: "80ms" }}>
               {dict.hero.role}
             </p>
-            <h1 className="hero__brand anim-fade-up" style={{ animationDelay: "160ms" }}>
+            <h1 dir="ltr" className="hero__brand anim-fade-up" style={{ animationDelay: "160ms" }}>
               <span className="hero__brand-line">Atheeq</span>{" "}
               <span className="hero__brand-line">Syed</span>
             </h1>
