@@ -20,7 +20,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "sub": "I combine customer discovery, analytics and technical fluency to define products, build with engineering, launch workflows and measure adoption. I also build AI and SaaS products independently.",
       "email": "Let’s talk",
       "resume": "Download resume",
-      "basedIn": "Paris / India",
+      "basedIn": "Paris, France",
       "selectedWork": "Explore my work"
     },
     "about": {
@@ -438,7 +438,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "sub": "Je comprends les processus utilisateurs, définis les priorités produit et coordonne le déploiement avec les équipes d’ingénierie. Je prototype et code avec des outils comme Cursor lorsque cela fait avancer une idée.",
       "email": "Échangeons",
       "resume": "Télécharger le CV",
-      "basedIn": "Paris / India",
+      "basedIn": "Paris, France",
       "selectedWork": "Découvrir mon travail"
     },
     "about": {
@@ -856,7 +856,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "sub": "أفهم سير عمل المستخدم وأحدد أولويات المنتج وأنسق مع فرق الهندسة لنشر حلول مفيدة. أبني النماذج وأكتب الكود بأدوات مثل Cursor عندما يساعد ذلك على تطوير الفكرة.",
       "email": "راسلني",
       "resume": "تحميل السيرة",
-      "basedIn": "باريس / الهند",
+      "basedIn": "باريس، فرنسا",
       "selectedWork": "استكشف أعمالي"
     },
     "about": {
