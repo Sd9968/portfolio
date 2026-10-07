@@ -16,8 +16,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     "hero": {
       "role": "Product · AI Deployment Strategy · Enterprise Workflows",
-      "headline": "I help teams turn user needs into solutions that fit their workflows.",
-      "sub": "I understand user workflows, shape product priorities, and coordinate with engineering teams to deploy useful solutions. When it helps move an idea forward, I prototype and code with tools like Cursor.",
+      "headline": "I turn ambiguous operational problems into products people can use.",
+      "sub": "I combine customer discovery, analytics and technical fluency to define products, build with engineering, launch workflows and measure adoption. I also build AI and SaaS products independently.",
       "email": "Let’s talk",
       "resume": "Download resume",
       "basedIn": "Paris, France",
@@ -27,8 +27,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "label": "About",
       "title": "Understanding the workflow is where the product starts.",
       "p1": "My path connects computer science at SRM University AP, payments technology at Fiserv, and a Master in Management at ESSEC across Singapore and Paris. I enjoy the point where a business problem becomes something concrete enough to build.",
-      "p2": "At Sanofi, I worked with product, engineering, and business teams to turn recurring development bottlenecks into an internal AI product. At KidSpass.Asia, conversations with partners and customers helped reshape onboarding with the founding team.",
-      "p3": "I’m interested in product and deployment strategy: understanding how people work, deciding what a solution needs to do, and helping teams adopt it. I can prototype and code using Cursor, alongside coordinating with engineering teams. My projects let me explore voice-based service access, content operations, and visual decision support."
+      "p2": "At Sanofi, I completed an AI Strategy & Portfolio internship spanning AI enablement and adoption analytics across a global pharmaceutical organization. At KidsPass.Asia, I combined partner conversations, competitor research and KPI analysis to improve onboarding with the founding team.",
+      "p3": "I have taken products from discovery through launch and commercialisation. Meet Your Plate was built, launched and sold; Termnex is a terminal operating system I am developing to connect gate, yard, equipment and inventory workflows."
     },
     "work": {
       "label": "Selected work",
@@ -37,7 +37,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           "name": "Sanofi — internal AI product",
           "tag": "Discovery → Integration → Deployment",
-          "summary": "Teams were rebuilding components that already existed. I led an internal AI product from discovery through deployment to help teams find and reuse existing work.",
+          "summary": "Teams were rebuilding components that already existed. I built an AI product proof of concept across GitHub codebases and Snowflake datasets so 200+ teams could discover and reuse existing work.",
           "points": [],
           "status": "Deployed internally",
           "stack": [
@@ -66,11 +66,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
               },
               {
                 "title": "My contribution",
-                "body": "Led discovery and end-to-end deployment, coordinated with product, engineering, and business stakeholders, and built the solution."
+                "body": "Structured the ambiguous reuse problem into a product workflow, built the proof of concept with AI tooling, and validated records with product and engineering owners before release."
               },
               {
                 "title": "Evidence & next measurement",
-                "body": "Deployed internally; discovery covered 20+ teams. Component reuse is supported by the resume; no quantified time or investment savings are claimed."
+                "body": "The proof of concept covered GitHub and Snowflake records used by 200+ teams. Each record was reviewed with product and engineering owners; no time or investment savings are claimed."
               }
             ],
             "metrics": [
@@ -213,12 +213,36 @@ export const dictionaries: Record<Locale, Dictionary> = {
           }
         },
         {
+          "name": "Termnex",
+          "tag": "Terminal operations · B2B SaaS",
+          "status": "In development · Preparing for commercialisation",
+          "summary": "A Terminal Operating System connecting gates, yards, equipment operators, container inventory and terminal management in one traceable workflow.",
+          "points": [],
+          "stack": ["React", "FastAPI", "PostgreSQL", "QR workflows", "Role-based access"],
+          "detailLabel": "Read the product case study",
+          "caseStudy": {
+            "sections": [
+              {"title": "Product rationale", "body": "Container yards often coordinate truck arrivals, gate passes, container movements, equipment tasks and charges through paperwork, spreadsheets and disconnected messages. Termnex creates one operational record."},
+              {"title": "Users & jobs to be done", "body": "Managers, gate operators, watchmen, field supervisors and crane operators need role-specific views to admit trucks, verify passes, place or collect containers, assign equipment work and monitor the yard."},
+              {"title": "Product & deployment decisions", "body": "Designed role-based access, QR gate verification, arrival and exit timestamps, container placement and pickup jobs, crane queues, live yard inventory, a visual floor plan, tariffs, document expiry alerts and activity logs."},
+              {"title": "Workflow", "body": "Register customer and driver → issue Gate In or Gate Out pass → verify QR → record arrival → assign yard or crane task → update container location → record exit, charges and activity."},
+              {"title": "My contribution", "body": "Own problem discovery, product definition, workflow design, full-stack build, testing and launch preparation, with the goal of commercialising the product for container terminals."},
+              {"title": "Evidence & next measurement", "body": "Working product in development. Commercial adoption and operational improvements are not yet claimed."}
+            ],
+            "metrics": [
+              {"name": "Truck turnaround time", "definition": "Median and 90th-percentile time from gate arrival to recorded exit, segmented by movement type."},
+              {"name": "Movement traceability", "definition": "Container movements with complete timestamps, assigned operator and confirmed yard location ÷ total movements."},
+              {"name": "Yard accuracy & task completion", "definition": "Inventory records matching verified locations; jobs completed within the expected operating window."}
+            ]
+          }
+        },
+        {
           "name": "Meet Your Plate",
           "tag": "Dining decisions · AR menus",
           "href": "https://www.meetyourplate.com/",
           "summary": "A platform where restaurant owners build their menus and host AR models — giving diners a richer, more immersive way to experience dishes before they order.",
           "points": [],
-          "status": "Additional product exploration",
+          "status": "Built, launched and sold",
           "detailLabel": "Read the product case study",
           "stack": [
             "AR",
@@ -244,11 +268,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
               },
               {
                 "title": "My contribution",
-                "body": "Created the menu and AR product presented in the existing portfolio. Customer interviews, restaurant adoption, and commercial impact are not documented here."
+                "body": "Independently owned customer discovery, product definition, development, launch, onboarding and the end-to-end sale of the product."
               },
               {
                 "title": "Evidence & next measurement",
-                "body": "Product exploration. The metrics below require restaurant pilots and instrumentation; this portfolio does not claim reduced order errors."
+                "body": "Meet Your Plate was built, launched and sold. The transaction value and restaurant adoption figures are not disclosed; the metrics below show how I would evaluate continued product use."
               }
             ],
             "metrics": [
@@ -279,20 +303,31 @@ export const dictionaries: Record<Locale, Dictionary> = {
           "period": "Sep 2025 – Sep 2026",
           "location": "Paris, France",
           "bullets": [
-            "Led discovery across 20+ teams and end-to-end deployment of an internal AI product.",
-            "Built with GitHub APIs, internal commercial datasets, and Snowflake Cortex to support component reuse.",
-            "Translated stakeholder workflows into capabilities, validated outputs, and supported adoption."
+            "Built an AI product proof of concept across GitHub codebases and Snowflake datasets used by 200+ teams.",
+            "Built a daily-refreshed Power BI adoption dashboard covering 45,000+ employees across 45+ countries.",
+            "Used Cursor, GPT and Claude to structure an ambiguous reuse problem, then validated outputs with product and engineering owners."
           ]
         },
         {
           "company": "KidsPass.Asia",
-          "title": "Product Analyst Intern",
+          "title": "Business Development Intern",
           "period": "Nov 2024 – Jan 2025",
           "location": "Singapore",
           "bullets": [
-            "Spoke with 50+ partners and customers; redesigned onboarding with the founding team, achieving around 40% onboarding conversion.",
+            "Reviewed onboarding across 50+ partners and customers, redesigned the flow with the founding team, and helped onboarding reach 42%.",
             "Tracked KPIs in Excel and Power BI and shared partner trends and competitor insights with founders.",
             "Turned feedback and onboarding findings into product priorities."
+          ]
+        },
+        {
+          "company": "Meet Your Plate & Termnex",
+          "title": "Founder & Product Lead",
+          "period": "Independent ventures",
+          "location": "Product development & commercialisation",
+          "bullets": [
+            "Built, launched and sold Meet Your Plate, owning discovery, development, onboarding and the end-to-end sale.",
+            "Building Termnex, a Terminal Operating System connecting gates, yards, operators and container inventory.",
+            "Defined role-based workflows, QR verification, live yard locations, equipment assignments, tariffs, alerts and reporting."
           ]
         },
         {
@@ -596,6 +631,30 @@ export const dictionaries: Record<Locale, Dictionary> = {
           }
         },
         {
+          "name": "Termnex",
+          "tag": "Opérations de terminal · SaaS B2B",
+          "status": "En développement · Préparation commerciale",
+          "summary": "Un Terminal Operating System qui relie les portes, le parc, les opérateurs, le stock de conteneurs et la direction dans un processus traçable.",
+          "points": [],
+          "stack": ["React", "FastAPI", "PostgreSQL", "QR", "Gestion des rôles"],
+          "detailLabel": "Lire l’étude de cas produit",
+          "caseStudy": {
+            "sections": [
+              {"title": "Logique produit", "body": "Les terminaux coordonnent souvent les camions, conteneurs, équipements et frais via papier, tableurs et messages dispersés. Termnex crée un dossier opérationnel unique."},
+              {"title": "Utilisateurs & besoins", "body": "Managers, agents de porte, gardiens, superviseurs terrain et grutiers disposent de vues adaptées pour gérer les mouvements et le parc."},
+              {"title": "Décisions produit & déploiement", "body": "Rôles, vérification QR, horodatages, tâches de placement et retrait, files de grues, inventaire en direct, plan visuel, tarifs, alertes documentaires et journaux d’activité."},
+              {"title": "Parcours", "body": "Client et chauffeur → Gate In/Out → QR → arrivée → tâche parc ou grue → emplacement → sortie, frais et journal."},
+              {"title": "Ma contribution", "body": "Découverte, définition produit, conception des processus, développement full-stack, tests et préparation du lancement commercial."},
+              {"title": "Éléments établis & mesure à venir", "body": "Produit fonctionnel en développement. Aucune adoption commerciale ni amélioration opérationnelle n’est encore revendiquée."}
+            ],
+            "metrics": [
+              {"name": "Temps de rotation camion", "definition": "Temps médian et 90e percentile entre l’arrivée et la sortie."},
+              {"name": "Traçabilité des mouvements", "definition": "Mouvements avec horodatages, opérateur et emplacement complets ÷ total."},
+              {"name": "Précision du parc", "definition": "Concordance entre inventaire et emplacements vérifiés, avec respect des délais des tâches."}
+            ]
+          }
+        },
+        {
           "name": "Meet Your Plate",
           "tag": "Choix des plats · Menus AR",
           "href": "https://www.meetyourplate.com/",
@@ -669,13 +728,24 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           "company": "KidsPass.Asia",
-          "title": "Stagiaire Product Analyst",
+          "title": "Stagiaire Business Development",
           "period": "Nov 2024 – Jan 2025",
           "location": "Singapour",
           "bullets": [
-            "Échanges avec plus de 50 partenaires et clients ; refonte de l’onboarding avec les fondateurs, atteignant environ 40 % de conversion.",
+            "Analyse de l’onboarding de plus de 50 partenaires et clients ; refonte avec les fondateurs, atteignant 42 % d’onboarding.",
             "Suivi des KPIs dans Excel et Power BI, partage des tendances partenaires et de la veille concurrentielle.",
             "Transformation des retours clients en priorités produit."
+          ]
+        },
+        {
+          "company": "Meet Your Plate & Termnex",
+          "title": "Fondateur & Product Lead",
+          "period": "Projets indépendants",
+          "location": "Produit & commercialisation",
+          "bullets": [
+            "Construction, lancement et vente de Meet Your Plate, de la découverte client à la transaction.",
+            "Construction de Termnex, un Terminal Operating System reliant portes, parc, opérateurs et stock de conteneurs.",
+            "Définition des rôles, QR, mouvements, emplacements, tâches grues, tarifs, alertes et reporting."
           ]
         },
         {
@@ -979,6 +1049,30 @@ export const dictionaries: Record<Locale, Dictionary> = {
           }
         },
         {
+          "name": "Termnex",
+          "tag": "تشغيل محطات الحاويات · SaaS B2B",
+          "status": "قيد التطوير · التحضير للتسويق",
+          "summary": "نظام تشغيل يربط بوابات المحطة والساحة ومشغلي المعدات ومخزون الحاويات والإدارة في سير عمل واحد قابل للتتبع.",
+          "points": [],
+          "stack": ["React", "FastAPI", "PostgreSQL", "QR", "Role-based access"],
+          "detailLabel": "اقرأ دراسة حالة المنتج",
+          "caseStudy": {
+            "sections": [
+              {"title": "منطق المنتج", "body": "تدير ساحات الحاويات الشاحنات والحاويات والمعدات والرسوم عبر الورق والجداول والرسائل المتفرقة. ينشئ Termnex سجلاً تشغيلياً موحداً."},
+              {"title": "المستخدمون واحتياجاتهم", "body": "يستخدمه المديرون وموظفو البوابة والحراس ومشرفو الساحة ومشغلو الرافعات لإدارة الحركات والمهام والمخزون."},
+              {"title": "قرارات المنتج والنشر", "body": "صلاحيات حسب الدور، تحقق QR، أوقات الوصول والخروج، مهام الوضع والاستلام، طوابير الرافعات، المخزون المباشر، مخطط الساحة، التعرفة، تنبيهات المستندات وسجل النشاط."},
+              {"title": "سير العمل", "body": "تسجيل العميل والسائق ← Gate In/Out ← تحقق QR ← وصول ← مهمة ساحة أو رافعة ← تحديث الموقع ← خروج ورسوم وسجل."},
+              {"title": "مساهمتي", "body": "أملك اكتشاف المشكلة وتعريف المنتج وتصميم سير العمل والبناء الكامل والاختبار والتحضير للإطلاق التجاري."},
+              {"title": "ما ثبت وما يحتاج القياس", "body": "منتج عامل قيد التطوير. لا أدعي بعد تبنياً تجارياً أو تحسناً تشغيلياً."}
+            ],
+            "metrics": [
+              {"name": "زمن دوران الشاحنة", "definition": "الوسيط والمئين التسعون من الوصول إلى الخروج."},
+              {"name": "تتبع الحركة", "definition": "الحركات المكتملة بالتوقيت والمشغل والموقع ÷ إجمالي الحركات."},
+              {"name": "دقة الساحة", "definition": "مطابقة المخزون للمواقع المؤكدة وإنجاز المهام ضمن الوقت المتوقع."}
+            ]
+          }
+        },
+        {
           "name": "Meet Your Plate",
           "tag": "اختيار الأطباق · قوائم AR",
           "href": "https://www.meetyourplate.com/",
@@ -1052,13 +1146,24 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           "company": "KidsPass.Asia",
-          "title": "متدرب تحليل المنتجات",
+          "title": "متدرب تطوير الأعمال",
           "period": "نوفمبر 2024 – يناير 2025",
           "location": "سنغافورة",
           "bullets": [
-            "تحدثت مع أكثر من 50 شريكاً وعميلاً وأعدت تصميم الانضمام مع المؤسسين، محققاً نحو 40% تحويل.",
+            "حللت انضمام أكثر من 50 شريكاً وعميلاً وأعدت تصميم المسار مع المؤسسين، ليصل إلى 42%.",
             "تابعت مؤشرات المنتج في Excel وPower BI وشاركت اتجاهات الشركاء وتحليلات المنافسين.",
             "حوّلت الملاحظات إلى أولويات للمنتج."
+          ]
+        },
+        {
+          "company": "Meet Your Plate & Termnex",
+          "title": "المؤسس وقائد المنتج",
+          "period": "مشاريع مستقلة",
+          "location": "تطوير المنتج وتسويقه",
+          "bullets": [
+            "بنيت وأطلقت وبعت Meet Your Plate من اكتشاف العميل إلى البيع.",
+            "أبني Termnex، نظام تشغيل لساحات الحاويات يربط البوابة والساحة والمشغلين والمخزون.",
+            "صممت الصلاحيات والتحقق عبر QR وحركات الحاويات ومهام الرافعات والتعرفة والتنبيهات والتقارير."
           ]
         },
         {
