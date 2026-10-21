@@ -27,7 +27,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "label": "About",
       "title": "Understanding the workflow is where the product starts.",
       "p1": "My path connects computer science at SRM University AP, payments technology at Fiserv, and a Master in Management at ESSEC across Singapore and Paris. I enjoy the point where a business problem becomes something concrete enough to build.",
-      "p2": "At Sanofi, I completed an AI Strategy & Portfolio internship spanning AI enablement and adoption analytics across a global pharmaceutical organization. At KidsPass.Asia, I combined partner conversations, competitor research and KPI analysis to improve onboarding with the founding team.",
+      "p2": "At Sanofi, I worked with procurement, operations, engineering and data teams to turn approval, exception and stock-management workflows into AI-enabled products and automation. At KidsPass.Asia, I combined partner conversations, competitor research and KPI analysis to improve onboarding with the founding team.",
       "p3": "I have taken products from discovery through launch and commercialisation. Meet Your Plate was built, launched and sold; Termnex is a terminal operating system I am developing to connect gate, yard, equipment and inventory workflows."
     },
     "work": {
@@ -35,56 +35,56 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "title": "Understanding the workflow is where the product starts.",
       "items": [
         {
-          "name": "Sanofi — internal AI product",
-          "tag": "Discovery → Integration → Deployment",
-          "summary": "Teams were rebuilding components that already existed. I built an AI product proof of concept across GitHub codebases and Snowflake datasets so 200+ teams could discover and reuse existing work.",
+          "name": "Sanofi — procurement AI product",
+          "tag": "Discovery → Agent logic → Automation",
+          "summary": "Procurement teams needed a clearer way to navigate approvals, exceptions and stock decisions. I shaped and delivered an AI agent workflow that could act, ask for clarification or hand off to a human based on confidence, permissions and policy constraints.",
           "points": [],
           "status": "Deployed internally",
           "stack": [
-            "GitHub APIs",
-            "Snowflake Cortex",
-            "Internal datasets"
+            "Voice AI",
+            "SQL",
+            "APIs & automation"
           ],
           "detailLabel": "Read the product case study",
           "caseStudy": {
             "sections": [
               {
                 "title": "Product rationale",
-                "body": "Repeated development was a workflow problem: teams needed to discover reusable work before committing time and budget to rebuilding. Discovery across 20+ teams informed the internal product."
+                "body": "Procurement requests moved through approval, exception and stock-management workflows with different rules and constraints. Discovery with procurement and operations teams clarified where an AI agent could help and where human judgement had to remain."
               },
               {
                 "title": "Users & jobs to be done",
-                "body": "Internal product, engineering, and business teams evaluating AI initiatives. Their job: find relevant components, assess reuse, and move from an idea to a scoped solution."
+                "body": "Procurement and operations teams handling requests, approvals, supplier information and stock decisions. Their job: reach the right action quickly while preserving permissions, policy checks and a reliable route to human support."
               },
               {
                 "title": "Product & deployment decisions",
-                "body": "Brought GitHub APIs, internal commercial datasets, and Snowflake Cortex into the workflow. Worked with stakeholders to translate needs into capabilities, validate outputs, iterate on gaps, and support adoption."
+                "body": "Defined when the agent should act, ask a clarifying question or hand off to a human. The workflow used confidence, permissions and policy constraints, with SQL-based supplier, order and quantity data supporting minimum-stock rules and replenishment automation."
               },
               {
                 "title": "Workflow",
-                "body": "New initiative → find existing components → assess fit with stakeholders → reuse where appropriate → validate and adopt."
+                "body": "Request → identify intent and context → check permissions and policy → retrieve operational data → act, clarify or hand off → record the outcome."
               },
               {
                 "title": "My contribution",
-                "body": "Structured the ambiguous reuse problem into a product workflow, built the proof of concept with AI tooling, and validated records with product and engineering owners before release."
+                "body": "Led discovery, mapped approval and exception workflows, wrote product requirements and acceptance criteria, defined agent decision logic, and coordinated delivery with engineering, data and platform teams."
               },
               {
                 "title": "Evidence & next measurement",
-                "body": "The proof of concept covered GitHub and Snowflake records used by 200+ teams. Each record was reviewed with product and engineering owners; no time or investment savings are claimed."
+                "body": "The team reduced end-to-end agent response latency to about 800 ms and launched policy-based replenishment automation. The portfolio does not claim completion-rate, adoption or cost-saving results."
               }
             ],
             "metrics": [
               {
-                "name": "Successful reuse rate",
-                "definition": "Initiatives that reuse a suitable existing component ÷ initiatives assessed."
+                "name": "Correct workflow completion",
+                "definition": "Requests completed with the correct action and policy checks ÷ eligible requests; track manual rework separately."
               },
               {
-                "name": "Time to identify a usable component",
-                "definition": "Median time from a reuse request to a stakeholder-validated match."
+                "name": "Response and action latency",
+                "definition": "Median and 90th-percentile time from a user request to a useful response or completed action."
               },
               {
-                "name": "Adoption & relevance",
-                "definition": "Repeat use by target teams; proportion of suggested components judged relevant."
+                "name": "Clarification & handoff quality",
+                "definition": "Uncertain or restricted requests correctly clarified or escalated with sufficient context ÷ requests requiring intervention."
               }
             ]
           }
@@ -303,9 +303,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
           "period": "Sep 2025 – Sep 2026",
           "location": "Paris, France",
           "bullets": [
-            "Built an AI product proof of concept across GitHub codebases and Snowflake datasets used by 200+ teams.",
-            "Built a daily-refreshed Power BI adoption dashboard covering 45,000+ employees across 45+ countries.",
-            "Used Cursor, GPT and Claude to structure an ambiguous reuse problem, then validated outputs with product and engineering owners."
+            "Led discovery with procurement and operations teams, mapped approval and exception workflows, and translated user needs into roadmap priorities, requirements and acceptance criteria.",
+            "Owned AI agent delivery and decision logic, defining when the product should act, clarify or hand off based on confidence, permissions and policy constraints.",
+            "Partnered with engineering, data and platform teams to reduce response latency to ~800 ms; used SQL to define minimum-stock KPIs and launch policy-based replenishment automation."
           ]
         },
         {
@@ -445,7 +445,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "label": "À propos",
       "title": "Comprendre le processus est le point de départ du produit.",
       "p1": "Mon parcours relie l’informatique à SRM University AP, les paiements chez Fiserv et un Master in Management à l’ESSEC, entre Singapour et Paris. J’aime transformer un problème métier en solution concrète.",
-      "p2": "Chez Sanofi, j’ai travaillé avec les équipes produit, ingénierie et métier pour transformer des difficultés récurrentes de développement en produit IA interne. Chez KidSpass.Asia, les échanges avec les partenaires et clients ont guidé la refonte de l’onboarding avec les fondateurs.",
+      "p2": "Chez Sanofi, j’ai travaillé avec les équipes achats, opérations, ingénierie et data pour transformer les processus d’approbation, d’exception et de gestion des stocks en produits et automatisations basés sur l’IA. Chez KidSpass.Asia, les échanges avec les partenaires et clients ont guidé la refonte de l’onboarding avec les fondateurs.",
       "p3": "Je m’intéresse au produit et à la stratégie de déploiement : comprendre le travail des utilisateurs, définir la solution et accompagner son adoption. Je peux prototyper et coder avec Cursor, tout en coordonnant avec l’ingénierie. Mes projets explorent l’accès vocal aux services, les opérations de contenu et l’aide visuelle à la décision."
     },
     "work": {
@@ -453,56 +453,56 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "title": "Comprendre le processus est le point de départ du produit.",
       "items": [
         {
-          "name": "Sanofi — produit IA interne",
-          "tag": "Découverte → Intégration → Déploiement",
+          "name": "Sanofi — produit IA pour les achats",
+          "tag": "Découverte → Logique agent → Automatisation",
           "status": "Déployé en interne",
-          "summary": "Les équipes reconstruisaient des composants déjà existants. J’ai mené un produit IA interne de la découverte au déploiement pour faciliter la recherche et la réutilisation du travail existant.",
+          "summary": "Les équipes achats avaient besoin d’un parcours plus clair pour gérer les approbations, les exceptions et les décisions de stock. J’ai conçu et livré un agent IA capable d’agir, de demander une précision ou de transférer à un humain selon la confiance, les permissions et les règles.",
           "points": [],
           "stack": [
-            "GitHub APIs",
-            "Snowflake Cortex",
-            "Internal datasets"
+            "Voice AI",
+            "SQL",
+            "APIs & automatisation"
           ],
           "detailLabel": "Lire l’étude de cas produit",
           "caseStudy": {
             "sections": [
               {
                 "title": "Logique produit",
-                "body": "Les développements répétés révélaient un problème de processus : découvrir les composants réutilisables avant de mobiliser du temps et du budget. Les échanges avec plus de 20 équipes ont guidé le produit interne."
+                "body": "Les demandes achats suivaient des processus d’approbation, d’exception et de stock avec des règles et contraintes différentes. La découverte avec les équipes achats et opérations a permis d’identifier où l’agent IA pouvait intervenir et où le jugement humain devait rester central."
               },
               {
                 "title": "Utilisateurs & besoins",
-                "body": "Équipes internes produit, ingénierie et métier évaluant des initiatives IA : trouver des composants pertinents, évaluer leur réutilisation et cadrer une solution."
+                "body": "Équipes achats et opérations gérant les demandes, approbations, informations fournisseurs et décisions de stock. Leur besoin : atteindre rapidement la bonne action tout en respectant les permissions, les règles et l’accès à une aide humaine."
               },
               {
                 "title": "Décisions produit & déploiement",
-                "body": "Intégration des APIs GitHub, de données commerciales internes et de Snowflake Cortex. Traduction des besoins en fonctionnalités, validation avec les équipes, itérations et accompagnement de l’adoption."
+                "body": "Définition des cas où l’agent agit, demande une précision ou transfère à un humain. Le parcours utilise la confiance, les permissions et les règles, avec des données SQL sur les fournisseurs, commandes et quantités pour les seuils de stock et le réapprovisionnement."
               },
               {
                 "title": "Parcours",
-                "body": "Initiative → recherche de composants → évaluation avec les équipes → réutilisation → validation et adoption."
+                "body": "Demande → intention et contexte → permissions et règles → données opérationnelles → action, clarification ou transfert → enregistrement du résultat."
               },
               {
                 "title": "Ma contribution",
-                "body": "Pilotage de la découverte et du déploiement complet, coordination des équipes produit, ingénierie et métier, et construction de la solution."
+                "body": "Pilotage de la découverte, cartographie des approbations et exceptions, rédaction des exigences et critères d’acceptation, définition de la logique de décision et coordination avec l’ingénierie, la data et les plateformes."
               },
               {
                 "title": "Éléments établis & mesure à venir",
-                "body": "Déployé en interne ; découverte auprès de plus de 20 équipes. Aucun gain chiffré en temps ou en investissement n’est revendiqué."
+                "body": "Le temps de réponse de bout en bout a été ramené à environ 800 ms et l’automatisation du réapprovisionnement selon les règles a été lancée. Aucun résultat de taux d’achèvement, d’adoption ou d’économie n’est revendiqué."
               }
             ],
             "metrics": [
               {
-                "name": "Taux de réutilisation réussie",
-                "definition": "Initiatives réutilisant un composant adapté ÷ initiatives évaluées."
+                "name": "Achèvement correct du processus",
+                "definition": "Demandes terminées avec la bonne action et les contrôles requis ÷ demandes éligibles ; suivre séparément les reprises manuelles."
               },
               {
-                "name": "Temps pour trouver un composant utile",
-                "definition": "Temps médian entre une demande et une correspondance validée par les équipes."
+                "name": "Latence de réponse et d’action",
+                "definition": "Temps médian et 90e percentile entre la demande utilisateur et une réponse utile ou une action terminée."
               },
               {
-                "name": "Adoption & pertinence",
-                "definition": "Usage répété par les équipes cibles et proportion de recommandations jugées pertinentes."
+                "name": "Qualité des clarifications et transferts",
+                "definition": "Demandes incertaines ou restreintes correctement clarifiées ou transférées avec le contexte nécessaire ÷ demandes exigeant une intervention."
               }
             ]
           }
@@ -721,9 +721,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
           "period": "Sep 2025 – Sep 2026",
           "location": "Paris, France",
           "bullets": [
-            "Découverte auprès de plus de 20 équipes et déploiement complet d’un produit IA interne.",
-            "Intégration des APIs GitHub, de données commerciales internes et de Snowflake Cortex pour favoriser la réutilisation.",
-            "Traduction des besoins métier en fonctionnalités, validation et accompagnement de l’adoption."
+            "Découverte avec les équipes achats et opérations, cartographie des approbations et exceptions, puis traduction des besoins en priorités, exigences et critères d’acceptation.",
+            "Pilotage de la livraison et de la logique de décision de l’agent IA : agir, clarifier ou transférer selon la confiance, les permissions et les règles.",
+            "Collaboration avec l’ingénierie, la data et les plateformes pour atteindre ~800 ms de latence ; définition en SQL des KPIs de stock minimum et lancement du réapprovisionnement automatisé."
           ]
         },
         {
@@ -863,7 +863,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "label": "نبذة",
       "title": "فهم سير العمل هو بداية المنتج.",
       "p1": "يجمع مساري بين علوم الحاسوب في SRM University AP وتقنيات الدفع في Fiserv وماجستير الإدارة في ESSEC بين سنغافورة وباريس. أستمتع بتحويل مشكلات الأعمال إلى حلول قابلة للبناء.",
-      "p2": "في سانوفي، عملت مع فرق المنتج والهندسة والأعمال لتحويل عقبات التطوير المتكررة إلى منتج ذكاء اصطناعي داخلي. وفي KidSpass.Asia، ساهمت محادثات الشركاء والعملاء في إعادة تصميم تجربة الانضمام مع الفريق المؤسس.",
+      "p2": "في سانوفي، عملت مع فرق المشتريات والعمليات والهندسة والبيانات لتحويل مسارات الموافقات والاستثناءات وإدارة المخزون إلى منتجات وأتمتة مدعومة بالذكاء الاصطناعي. وفي KidSpass.Asia، ساهمت محادثات الشركاء والعملاء في إعادة تصميم تجربة الانضمام مع الفريق المؤسس.",
       "p3": "اهتماماتي هي المنتج واستراتيجية النشر: فهم عمل الناس وتحديد احتياجات الحل ودعم تبنيه. أستطيع بناء نماذج وكتابة الكود باستخدام Cursor مع التنسيق مع فرق الهندسة. تستكشف مشاريعي الوصول الصوتي للخدمات وعمليات المحتوى ودعم القرار بصرياً."
     },
     "work": {
@@ -871,56 +871,56 @@ export const dictionaries: Record<Locale, Dictionary> = {
       "title": "فهم سير العمل هو بداية المنتج.",
       "items": [
         {
-          "name": "سانوفي — منتج ذكاء اصطناعي داخلي",
-          "tag": "اكتشاف ← تكامل ← نشر",
+          "name": "سانوفي — منتج ذكاء اصطناعي للمشتريات",
+          "tag": "اكتشاف ← منطق الوكيل ← أتمتة",
           "status": "منشور داخلياً",
-          "summary": "كانت الفرق تعيد بناء مكونات موجودة. قدت منتجاً داخلياً من الاكتشاف إلى النشر لمساعدة الفرق على العثور على العمل القائم وإعادة استخدامه.",
+          "summary": "احتاجت فرق المشتريات إلى مسار أوضح للتعامل مع الموافقات والاستثناءات وقرارات المخزون. صممت وسلّمت سير عمل لوكيل ذكاء اصطناعي يمكنه التنفيذ أو طلب توضيح أو التحويل إلى موظف حسب الثقة والصلاحيات والسياسات.",
           "points": [],
           "stack": [
-            "GitHub APIs",
-            "Snowflake Cortex",
-            "Internal datasets"
+            "Voice AI",
+            "SQL",
+            "APIs & automation"
           ],
           "detailLabel": "اقرأ دراسة حالة المنتج",
           "caseStudy": {
             "sections": [
               {
                 "title": "منطق المنتج",
-                "body": "تكرار التطوير كان مشكلة في سير العمل: العثور على المكونات القابلة لإعادة الاستخدام قبل تخصيص الوقت والميزانية. وجّهت جلسات مع أكثر من 20 فريقاً المنتج الداخلي."
+                "body": "مرت طلبات المشتريات عبر مسارات موافقات واستثناءات وقرارات مخزون بقواعد وقيود مختلفة. أوضح الاكتشاف مع فرق المشتريات والعمليات أين يمكن للوكيل المساعدة وأين يجب أن يبقى الحكم البشري."
               },
               {
                 "title": "المستخدمون واحتياجاتهم",
-                "body": "فرق المنتج والهندسة والأعمال الداخلية التي تقيّم مبادرات الذكاء الاصطناعي: العثور على مكونات مناسبة وتقييم إعادة استخدامها وتحديد نطاق الحل."
+                "body": "فرق المشتريات والعمليات التي تدير الطلبات والموافقات وبيانات الموردين وقرارات المخزون. مهمتهم الوصول إلى الإجراء الصحيح بسرعة مع الحفاظ على الصلاحيات والسياسات ومسار موثوق للمساعدة البشرية."
               },
               {
                 "title": "قرارات المنتج والنشر",
-                "body": "ربط GitHub APIs والبيانات التجارية الداخلية وSnowflake Cortex. تحويل الاحتياجات إلى قدرات والتحقق من النتائج مع الفرق وتحسينها ودعم الاستخدام."
+                "body": "تحديد متى ينفذ الوكيل الإجراء أو يطلب توضيحاً أو يحوّل الطلب إلى موظف. يستخدم المسار الثقة والصلاحيات والسياسات، مع بيانات SQL للموردين والطلبات والكميات لدعم قواعد الحد الأدنى للمخزون وأتمتة إعادة التوريد."
               },
               {
                 "title": "سير العمل",
-                "body": "مبادرة ← البحث عن مكونات ← تقييم الملاءمة ← إعادة الاستخدام ← التحقق والتبني."
+                "body": "طلب ← فهم النية والسياق ← التحقق من الصلاحيات والسياسات ← جلب البيانات التشغيلية ← تنفيذ أو توضيح أو تحويل ← تسجيل النتيجة."
               },
               {
                 "title": "مساهمتي",
-                "body": "قيادة الاكتشاف والنشر الكامل والتنسيق مع فرق المنتج والهندسة والأعمال وبناء الحل."
+                "body": "قدت الاكتشاف ورسمت مسارات الموافقات والاستثناءات وكتبت متطلبات المنتج ومعايير القبول وحددت منطق قرار الوكيل ونسقت التسليم مع فرق الهندسة والبيانات والمنصات."
               },
               {
                 "title": "ما ثبت وما يحتاج القياس",
-                "body": "منشور داخلياً؛ شمل الاكتشاف أكثر من 20 فريقاً. لا أدّعي وفورات رقمية في الوقت أو الاستثمار."
+                "body": "انخفض زمن استجابة الوكيل من البداية إلى النهاية إلى نحو 800 مللي ثانية، وأُطلقت أتمتة إعادة التوريد المعتمدة على السياسات. لا أدّعي نتائج لمعدل الإكمال أو التبني أو خفض التكلفة."
               }
             ],
             "metrics": [
               {
-                "name": "معدل إعادة الاستخدام الناجح",
-                "definition": "مبادرات أعادت استخدام مكون مناسب ÷ المبادرات المقيمة."
+                "name": "الإكمال الصحيح لسير العمل",
+                "definition": "الطلبات المكتملة بالإجراء الصحيح وفحوصات السياسات ÷ الطلبات المؤهلة، مع تتبع إعادة العمل اليدوي منفصلة."
               },
               {
-                "name": "وقت العثور على مكون مفيد",
-                "definition": "الوقت الوسيط من طلب البحث إلى تطابق توافق عليه الفرق."
+                "name": "زمن الاستجابة وتنفيذ الإجراء",
+                "definition": "الوسيط والمئين التسعون من طلب المستخدم إلى استجابة مفيدة أو إجراء مكتمل."
               },
               {
-                "name": "التبني والملاءمة",
-                "definition": "الاستخدام المتكرر من الفرق المستهدفة ونسبة التوصيات التي تُعد مناسبة."
+                "name": "جودة التوضيح والتحويل",
+                "definition": "الطلبات غير المؤكدة أو المقيدة التي جرى توضيحها أو تحويلها بالسياق الكافي ÷ الطلبات التي تحتاج تدخلاً."
               }
             ]
           }
@@ -1139,9 +1139,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
           "period": "Sep 2025 – Sep 2026",
           "location": "باريس، فرنسا",
           "bullets": [
-            "قدت الاكتشاف مع أكثر من 20 فريقاً ونشر منتج ذكاء اصطناعي داخلي من البداية إلى النهاية.",
-            "بنيت الحل باستخدام GitHub APIs والبيانات التجارية الداخلية وSnowflake Cortex لدعم إعادة الاستخدام.",
-            "حوّلت متطلبات الفرق إلى قدرات منتج وتحققت من النتائج ودعمت الاستخدام."
+            "قدت الاكتشاف مع فرق المشتريات والعمليات، ورسمت مسارات الموافقات والاستثناءات، وحولت الاحتياجات إلى أولويات ومتطلبات ومعايير قبول.",
+            "امتلكت تسليم الوكيل ومنطق قراره، وحددت متى ينفذ أو يطلب توضيحاً أو يحوّل الطلب حسب الثقة والصلاحيات والسياسات.",
+            "تعاونت مع فرق الهندسة والبيانات والمنصات للوصول إلى زمن استجابة يقارب 800 مللي ثانية؛ واستخدمت SQL لتعريف مؤشرات الحد الأدنى للمخزون وإطلاق أتمتة إعادة التوريد."
           ]
         },
         {
